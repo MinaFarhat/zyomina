@@ -1,6 +1,6 @@
+// ignore_for_file: avoid_print
+
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
 class New extends StatefulWidget {
   const New({super.key});
@@ -37,13 +37,13 @@ class _NewState extends State<New> {
       child: Scaffold(
         backgroundColor: Colors.black,
         body: SingleChildScrollView(
-          physics: NeverScrollableScrollPhysics(),
+          physics: const NeverScrollableScrollPhysics(),
           child: Column(
             children: [
-              SizedBox(
+              const SizedBox(
                 height: 15,
               ),
-              Container(
+              SizedBox(
                 width: MediaQuery.of(context).size.width,
                 height: MediaQuery.of(context).size.height * 0.6 - 25,
                 child: Column(
@@ -53,7 +53,7 @@ class _NewState extends State<New> {
                         Container(
                           width: MediaQuery.of(context).size.width,
                           height: MediaQuery.of(context).size.height * 0.5,
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                             image: DecorationImage(
                               image: AssetImage(
                                 "assets/m1(3).jpg",
@@ -71,7 +71,7 @@ class _NewState extends State<New> {
                         Positioned(
                           bottom: MediaQuery.of(context).size.height * 0.2,
                           right: MediaQuery.of(context).size.width * 0.2,
-                          child: Center(
+                          child: const Center(
                             child: Text(
                               "New Collection",
                               style: TextStyle(
@@ -84,7 +84,7 @@ class _NewState extends State<New> {
                         ),
                       ],
                     ),
-                    Container(
+                    SizedBox(
                       width: MediaQuery.of(context).size.width,
                       height: MediaQuery.of(context).size.height * 0.06,
                       child: ListView.builder(
@@ -136,11 +136,11 @@ class _NewState extends State<New> {
                   ],
                 ),
               ),
-              Container(
+              SizedBox(
                 width: MediaQuery.of(context).size.width * 0.9,
                 height: MediaQuery.of(context).size.width * 0.6,
                 child: GridView.builder(
-                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisCount: 3,
                       crossAxisSpacing: 6,
                       mainAxisSpacing: 0.5,
@@ -150,7 +150,7 @@ class _NewState extends State<New> {
                   scrollDirection: Axis.vertical,
                   itemBuilder: (context, index) {
                     print(d[index]["image"]);
-                    return Container(
+                    return SizedBox(
                       width: MediaQuery.of(context).size.width * 0.5,
                       child: detail(index),
                     );
@@ -204,10 +204,10 @@ class _NewState extends State<New> {
                 radius: 13,
                 backgroundColor: Colors.grey.shade200,
                 child: Center(
-                  child:t==false? Icon(
+                  child:t==false? const Icon(
                     Icons.favorite_border,
                     color: Colors.black,
-                  ):Icon(
+                  ):const Icon(
                     Icons.favorite,
                     color: Colors.black,
                   )
@@ -216,12 +216,12 @@ class _NewState extends State<New> {
             ))
           ],
         ),
-        SizedBox(
+        const SizedBox(
           height: 5,
         ),
         Text(
           d[index]["price"],
-          style: TextStyle(color: Colors.white, fontSize: 14),
+          style: const TextStyle(color: Colors.white, fontSize: 14),
         ),
       ],
     );
@@ -235,17 +235,17 @@ class _NewState extends State<New> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Icon(
+              const Icon(
                 Icons.mail_outline_rounded,
                 size: 27,
                 color: Colors.white,
               ),
-              Icon(
+              const Icon(
                 Icons.favorite_border_rounded,
                 size: 27,
                 color: Colors.white,
               ),
-              Container(
+              SizedBox(
                 width: MediaQuery.of(context).size.width * 0.66,
                 height: 50,
                 child: TextFormField(
@@ -257,15 +257,15 @@ class _NewState extends State<New> {
                     filled: true,
                     fillColor: Colors.white.withOpacity(0.3),
                     hintText: "Search",
-                    hintStyle: TextStyle(color: Colors.white, fontSize: 14),
-                    prefixIcon: Icon(
+                    hintStyle: const TextStyle(color: Colors.white, fontSize: 14),
+                    prefixIcon: const Icon(
                       Icons.search,
                       color: Colors.white,
                     ),
                   ),
                 ),
               ),
-              Icon(
+              const Icon(
                 Icons.shopping_bag_outlined,
                 size: 27,
                 color: Colors.white,

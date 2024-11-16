@@ -1,7 +1,6 @@
-import 'package:flutter/cupertino.dart';
+// ignore_for_file: deprecated_member_use
+
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:zyo/doneshopping.dart';
 
 class ShoppingAddress extends StatefulWidget {
@@ -21,7 +20,7 @@ class _ShoppingAddressState extends State<ShoppingAddress> {
         body: SingleChildScrollView(
           child: Column(
             children: [
-              SizedBox(height: 15,),
+              const SizedBox(height: 15,),
               Padding(
                padding:const EdgeInsets.symmetric(horizontal: 18, vertical: 5),
                 child: Row(
@@ -32,15 +31,15 @@ class _ShoppingAddressState extends State<ShoppingAddress> {
                       onTap: () {
                         Navigator.of(context).pop();
                       },
-                      child: Icon(
+                      child: const Icon(
                         Icons.arrow_back_ios_new_rounded,
                         color: Colors.white,
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 15,
                     ),
-                    Text(
+                    const Text(
                       "Shopping Address",
                       style: TextStyle(
                         color: Colors.white,
@@ -51,8 +50,8 @@ class _ShoppingAddressState extends State<ShoppingAddress> {
                   ],
                 ),
               ),
-              SizedBox(height: 30),
-              SizedBox(height: 10),
+              const SizedBox(height: 30),
+              const SizedBox(height: 10),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -72,7 +71,7 @@ class _ShoppingAddressState extends State<ShoppingAddress> {
                       overlayColor:
                           MaterialStateProperty.all(Colors.transparent),
                       onTap: () {},
-                      child: Icon(
+                      child: const Icon(
                         Icons.arrow_forward_ios_rounded,
                         color: Colors.white,
                       ),
@@ -80,18 +79,18 @@ class _ShoppingAddressState extends State<ShoppingAddress> {
                   ),
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 30,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               Padding(
-                padding: EdgeInsets.symmetric(horizontal: 20),
+                padding: const EdgeInsets.symmetric(horizontal: 20),
                 child: TextFormField(
                   keyboardType: TextInputType.name,
                   enableSuggestions: true,
-                  style: TextStyle(
+                  style: const TextStyle(
                     color: Colors.white,
                     fontSize: 16,
                     fontWeight: FontWeight.w500,
@@ -115,15 +114,15 @@ class _ShoppingAddressState extends State<ShoppingAddress> {
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 30,
               ),
               Padding(
-                padding: EdgeInsets.symmetric(horizontal: 20),
+                padding: const EdgeInsets.symmetric(horizontal: 20),
                 child: TextFormField(
                   keyboardType: TextInputType.name,
                   enableSuggestions: true,
-                  style: TextStyle(
+                  style: const TextStyle(
                     color: Colors.white,
                     fontSize: 16,
                     fontWeight: FontWeight.w500,
@@ -147,15 +146,15 @@ class _ShoppingAddressState extends State<ShoppingAddress> {
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 30,
               ),
               Padding(
-                padding: EdgeInsets.symmetric(horizontal: 20),
+                padding: const EdgeInsets.symmetric(horizontal: 20),
                 child: TextFormField(
                   keyboardType: TextInputType.phone,
                   enableSuggestions: true,
-                  style: TextStyle(
+                  style: const TextStyle(
                     color: Colors.white,
                     fontSize: 16,
                     fontWeight: FontWeight.w500,
@@ -191,11 +190,11 @@ class _ShoppingAddressState extends State<ShoppingAddress> {
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 15,
               ),
               Padding(
-                padding: EdgeInsets.symmetric(horizontal: 20),
+                padding: const EdgeInsets.symmetric(horizontal: 20),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
@@ -210,8 +209,8 @@ class _ShoppingAddressState extends State<ShoppingAddress> {
                   ],
                 ),
               ),
-              SizedBox(height: 40),
-              SizedBox(height: 10),
+              const SizedBox(height: 40),
+              const SizedBox(height: 10),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -231,7 +230,7 @@ class _ShoppingAddressState extends State<ShoppingAddress> {
                       overlayColor:
                           MaterialStateProperty.all(Colors.transparent),
                       onTap: () {},
-                      child: Icon(
+                      child: const Icon(
                         Icons.arrow_forward_ios_rounded,
                         color: Colors.white,
                       ),
@@ -239,7 +238,7 @@ class _ShoppingAddressState extends State<ShoppingAddress> {
                   ),
                 ],
               ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20),
                 child: Divider(
@@ -248,13 +247,13 @@ class _ShoppingAddressState extends State<ShoppingAddress> {
                   height: 2,
                 ),
               ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               Padding(
-                padding: EdgeInsets.symmetric(horizontal: 20),
+                padding: const EdgeInsets.symmetric(horizontal: 20),
                 child: TextFormField(
                   keyboardType: TextInputType.streetAddress,
                   enableSuggestions: true,
-                  style: TextStyle(
+                  style: const TextStyle(
                     color: Colors.white,
                     fontSize: 16,
                     fontWeight: FontWeight.w500,
@@ -278,13 +277,13 @@ class _ShoppingAddressState extends State<ShoppingAddress> {
                   ),
                 ),
               ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               Padding(
-                padding: EdgeInsets.symmetric(horizontal: 20),
+                padding: const EdgeInsets.symmetric(horizontal: 20),
                 child: TextFormField(
                   keyboardType: TextInputType.text,
                   enableSuggestions: true,
-                  style: TextStyle(
+                  style: const TextStyle(
                     color: Colors.white,
                     fontSize: 16,
                     fontWeight: FontWeight.w500,
@@ -308,15 +307,15 @@ class _ShoppingAddressState extends State<ShoppingAddress> {
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               Padding(
-                padding: EdgeInsets.symmetric(horizontal: 20),
+                padding: const EdgeInsets.symmetric(horizontal: 20),
                 child: TextFormField(
                   keyboardType: TextInputType.streetAddress,
                   enableSuggestions: true,
-                  style: TextStyle(
+                  style: const TextStyle(
                     color: Colors.white,
                     fontSize: 16,
                     fontWeight: FontWeight.w500,
@@ -352,15 +351,15 @@ class _ShoppingAddressState extends State<ShoppingAddress> {
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               Padding(
-                padding: EdgeInsets.symmetric(horizontal: 20),
+                padding: const EdgeInsets.symmetric(horizontal: 20),
                 child: TextFormField(
                   keyboardType: TextInputType.streetAddress,
                   enableSuggestions: true,
-                  style: TextStyle(
+                  style: const TextStyle(
                     color: Colors.white,
                     fontSize: 16,
                     fontWeight: FontWeight.w500,
@@ -396,11 +395,11 @@ class _ShoppingAddressState extends State<ShoppingAddress> {
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 35,
               ),
               Padding(
-                 padding: EdgeInsets.symmetric(horizontal: 20),
+                 padding: const EdgeInsets.symmetric(horizontal: 20),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -426,20 +425,20 @@ class _ShoppingAddressState extends State<ShoppingAddress> {
                   ],
                 ),
               ),
-              SizedBox(height: 25,),
+              const SizedBox(height: 25,),
               Padding(
                 padding: const EdgeInsets.all(10.0),
                 child: InkWell(
                   onTap: (){
                     Navigator.of(context).push(MaterialPageRoute(builder: (context){
-                      return Doneshopping();
+                      return const Doneshopping();
                     }));
                   },
                   child: Container(
                     color: Colors.white,
                     width: MediaQuery.of(context).size.width*0.90,
                     height: 55,
-                    child: Center(
+                    child: const Center(
                     child: Text(
                       "SAVE",
                       style: TextStyle(

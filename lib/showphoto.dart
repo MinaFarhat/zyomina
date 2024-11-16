@@ -1,7 +1,7 @@
+// ignore_for_file: deprecated_member_use, avoid_print
+
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:zyo/detailsofphoto.dart';
 import 'package:zyo/shoppingbug.dart';
 
@@ -36,7 +36,7 @@ class _ShowphotoState extends State<Showphoto> {
   bool heart = false;
   int x = 0;
   int selectindex = 0;
-  CarouselController controller = CarouselController();
+  //CarouselController controller = CarouselController();
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -44,7 +44,7 @@ class _ShowphotoState extends State<Showphoto> {
         backgroundColor: Colors.black,
         body: Column(
           children: [
-            SizedBox(
+            const SizedBox(
               height: 15,
             ),
             Padding(
@@ -57,12 +57,12 @@ class _ShowphotoState extends State<Showphoto> {
                     onTap: () {
                       Navigator.of(context).pop();
                     },
-                    child: Icon(
+                    child: const Icon(
                       Icons.arrow_back_ios_new_rounded,
                       color: Colors.white,
                     ),
                   ),
-                  Text(
+                  const Text(
                     "ZYO",
                     style: TextStyle(
                       color: Colors.white,
@@ -75,10 +75,10 @@ class _ShowphotoState extends State<Showphoto> {
                     onTap: () {
                       Navigator.of(context)
                           .push(MaterialPageRoute(builder: (context) {
-                        return Shoppingbug();
+                        return const Shoppingbug();
                       }));
                     },
-                    child: Icon(
+                    child: const Icon(
                       Icons.shopping_bag_outlined,
                       color: Colors.white,
                     ),
@@ -96,13 +96,13 @@ class _ShowphotoState extends State<Showphoto> {
                       return Details(img[selectindex]);
                     }));
                   },
-                  child: Container(
+                  child: SizedBox(
                     width: MediaQuery.of(context).size.width,
                     height: MediaQuery.of(context).size.height * 0.7,
                     child: Stack(
                       children: [
                         CarouselSlider(
-                          carouselController: controller,
+                          //carouselController: controller,
                           items: img.map((imageurl) {
                             return Container(
                               width: MediaQuery.of(context).size.width,
@@ -138,10 +138,11 @@ class _ShowphotoState extends State<Showphoto> {
                                 setState(() {
                                   heart = true;
                                 });
-                              } else
+                              } else {
                                 setState(() {
                                   heart = false;
                                 });
+                              }
                             },
                             overlayColor:
                                 MaterialStateProperty.all(Colors.transparent),
@@ -156,28 +157,28 @@ class _ShowphotoState extends State<Showphoto> {
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   heart == false
-                                      ? Center(
+                                      ? const Center(
                                           child: Icon(
                                             Icons.favorite_border,
                                             color: Colors.black,
                                             size: 32,
                                           ),
                                         )
-                                      : Center(
+                                      : const Center(
                                           child: Icon(
                                             Icons.favorite,
                                             color: Colors.black,
                                             size: 32,
                                           ),
                                         ),
-                                  SizedBox(
+                                  const SizedBox(
                                     width: 5,
                                   ),
                                   Text(
                                     heart == false
                                         ? x.toString()
                                         : (x + 1).toString(),
-                                    style: TextStyle(
+                                    style: const TextStyle(
                                       color: Colors.black,
                                       fontSize: 17,
                                       fontWeight: FontWeight.w400,
@@ -201,7 +202,7 @@ class _ShowphotoState extends State<Showphoto> {
                             child: Center(
                               child: Text(
                                 ("${selectindex + 1}/${img.length}").toString(),
-                                style: TextStyle(
+                                style: const TextStyle(
                                   color: Colors.white,
                                   fontSize: 14,
                                   fontWeight: FontWeight.w400,
@@ -214,14 +215,14 @@ class _ShowphotoState extends State<Showphoto> {
                     ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 5,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 7),
+                    const Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 7),
                       child: Text(
                         "CROP TOP DRAGON TOTEM PRINT LETTERS DESIGN",
                         style: TextStyle(
@@ -238,7 +239,7 @@ class _ShowphotoState extends State<Showphoto> {
                         onTap: () {
                           Navigator.of(context).pop();
                         },
-                        child: Icon(
+                        child: const Icon(
                           Icons.share,
                           color: Colors.white,
                         ),
@@ -246,7 +247,7 @@ class _ShowphotoState extends State<Showphoto> {
                     ),
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 15,
                 ),
                 Row(
@@ -256,14 +257,14 @@ class _ShowphotoState extends State<Showphoto> {
                       padding: const EdgeInsets.symmetric(horizontal: 7),
                       child: Row(
                         children: [
-                          Text(
+                          const Text(
                             "US\$9.00",
                             style: TextStyle(
                               color: Colors.white,
                               fontSize: 17,
                             ),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             width: 15,
                           ),
                           Text(
@@ -293,20 +294,21 @@ class _ShowphotoState extends State<Showphoto> {
                                   s3 = false;
                                   s4 = false;
                                 });
-                              } else
+                              } else {
                                 setState(() {
                                   s1 = false;
                                   s2 = false;
                                   s3 = false;
                                   s4 = false;
                                 });
+                              }
                             },
                             child: s1 == true
-                                ? Icon(
+                                ? const Icon(
                                     Icons.star,
                                     color: Colors.white,
                                   )
-                                : Icon(
+                                : const Icon(
                                     Icons.star_border,
                                     color: Colors.white,
                                   ),
@@ -322,19 +324,20 @@ class _ShowphotoState extends State<Showphoto> {
                                   s3 = false;
                                   s4 = false;
                                 });
-                              } else
+                              } else {
                                 setState(() {
                                   s2 = false;
                                   s3 = false;
                                   s4 = false;
                                 });
+                              }
                             },
                             child: s2 == true
-                                ? Icon(
+                                ? const Icon(
                                     Icons.star,
                                     color: Colors.white,
                                   )
-                                : Icon(
+                                : const Icon(
                                     Icons.star_border,
                                     color: Colors.white,
                                   ),
@@ -350,18 +353,19 @@ class _ShowphotoState extends State<Showphoto> {
                                   s3 = true;
                                   s4 = false;
                                 });
-                              } else
+                              } else {
                                 setState(() {
                                   s3 = false;
                                   s4 = false;
                                 });
+                              }
                             },
                             child: s3 == true
-                                ? Icon(
+                                ? const Icon(
                                     Icons.star,
                                     color: Colors.white,
                                   )
-                                : Icon(
+                                : const Icon(
                                     Icons.star_border,
                                     color: Colors.white,
                                   ),
@@ -377,17 +381,18 @@ class _ShowphotoState extends State<Showphoto> {
                                   s3 = true;
                                   s4 = true;
                                 });
-                              } else
+                              } else {
                                 setState(() {
                                   s4 = false;
                                 });
+                              }
                             },
                             child: s4 == true
-                                ? Icon(
+                                ? const Icon(
                                     Icons.star,
                                     color: Colors.white,
                                   )
-                                : Icon(
+                                : const Icon(
                                     Icons.star_border,
                                     color: Colors.white,
                                   ),

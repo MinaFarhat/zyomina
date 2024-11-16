@@ -1,7 +1,6 @@
-import 'package:flutter/cupertino.dart';
+// ignore_for_file: deprecated_member_use
+
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
 class Namescreen extends StatefulWidget {
   const Namescreen({super.key});
@@ -19,7 +18,7 @@ class _NamescreenState extends State<Namescreen> {
         body: SingleChildScrollView(
           child: Column(
             children: [
-              SizedBox(height: 15,),
+              const SizedBox(height: 15,),
               Padding(
                  padding: const EdgeInsets.symmetric(horizontal: 18,vertical: 5),
                 child: Row(
@@ -29,15 +28,15 @@ class _NamescreenState extends State<Namescreen> {
                       onTap: () {
                         Navigator.of(context).pop();
                       },
-                      child: Icon(
+                      child: const Icon(
                         Icons.arrow_back_ios_new_rounded,
                         color: Colors.white,
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 15,
                     ),
-                    Text(
+                    const Text(
                       "Settings",
                       style: TextStyle(
                         color: Colors.white,
@@ -48,22 +47,22 @@ class _NamescreenState extends State<Namescreen> {
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 50,
               ),
               Padding(
-                padding: EdgeInsets.symmetric(horizontal: 20),
+                padding: const EdgeInsets.symmetric(horizontal: 20),
                 child: TextFormField(
                   keyboardType: TextInputType.name,
                   enableSuggestions: true,
-                  style: TextStyle(
+                  style: const TextStyle(
                     color: Colors.white,
                     fontSize: 16,
                     fontWeight: FontWeight.w500,
                   ),
                   cursorHeight: 25,
                   cursorColor: Colors.white,
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                     label: Text(
                       "First Name",
                       style: TextStyle(
@@ -75,20 +74,20 @@ class _NamescreenState extends State<Namescreen> {
                   ),
                 ),
               ),
-              SizedBox(height: 30),
+              const SizedBox(height: 30),
               Padding(
-                padding: EdgeInsets.symmetric(horizontal: 20),
+                padding: const EdgeInsets.symmetric(horizontal: 20),
                 child: TextFormField(
                   keyboardType: TextInputType.name,
                   enableSuggestions: true,
-                  style: TextStyle(
+                  style: const TextStyle(
                     color: Colors.white,
                     fontSize: 16,
                     fontWeight: FontWeight.w500,
                   ),
                   cursorHeight: 25,
                   cursorColor: Colors.white,
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                     label: Text(
                       "Last Name",
                       style: TextStyle(
@@ -100,20 +99,20 @@ class _NamescreenState extends State<Namescreen> {
                   ),
                 ),
               ),
-              SizedBox(height: 30),
+              const SizedBox(height: 30),
               Padding(
-                padding: EdgeInsets.symmetric(horizontal: 20),
+                padding: const EdgeInsets.symmetric(horizontal: 20),
                 child: TextFormField(
                   keyboardType: TextInputType.emailAddress,
                   enableSuggestions: true,
-                  style: TextStyle(
+                  style: const TextStyle(
                     color: Colors.white,
                     fontSize: 16,
                     fontWeight: FontWeight.w500,
                   ),
                   cursorHeight: 25,
                   cursorColor: Colors.white,
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                     label: Text(
                       "Email",
                       style: TextStyle(
@@ -125,14 +124,14 @@ class _NamescreenState extends State<Namescreen> {
                   ),
                 ),
               ),
-              SizedBox(height: 70),
+              const SizedBox(height: 70),
               InkWell(
                 onTap: () {},
                 child: Container(
                   color: Colors.white,
                   width: MediaQuery.of(context).size.width*0.90,
                   height: 55,
-                  child: Center(
+                  child: const Center(
                     child: Text(
                       "SAVE",
                       style: TextStyle(

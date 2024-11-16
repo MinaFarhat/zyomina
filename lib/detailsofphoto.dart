@@ -1,8 +1,8 @@
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
+// ignore_for_file: deprecated_member_use
 
+import 'package:flutter/material.dart';
+
+// ignore: must_be_immutable
 class Details extends StatefulWidget {
   String? image;
   Details(this.image, {super.key});
@@ -30,16 +30,16 @@ class _DetailsState extends State<Details> {
         backgroundColor: Colors.black,
         body: Stack(
           children: [
-            Container(
+            SizedBox(
               height: MediaQuery.of(context).size.height -
                   MediaQuery.of(context).padding.top,
               child: SingleChildScrollView(
-                physics: NeverScrollableScrollPhysics(),
+                physics: const NeverScrollableScrollPhysics(),
                 child: Column(
                   children: [
                     Column(
                       children: [
-                        SizedBox(
+                        const SizedBox(
                           height: 15,
                         ),
                         Padding(
@@ -49,12 +49,12 @@ class _DetailsState extends State<Details> {
                             mainAxisAlignment: MainAxisAlignment.start,
                             children: [
                               InkWell(
-                                overlayColor: MaterialStateProperty.all(
+                                overlayColor: WidgetStateProperty.all(
                                     Colors.transparent),
                                 onTap: () {
                                   Navigator.of(context).pop();
                                 },
-                                child: Icon(
+                                child: const Icon(
                                   Icons.arrow_back_ios_new_rounded,
                                   color: Colors.white,
                                 ),
@@ -66,7 +66,7 @@ class _DetailsState extends State<Details> {
                           backgroundImage: AssetImage(widget.image.toString()),
                           radius: 45,
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 20,
                         ),
                         Row(
@@ -74,7 +74,7 @@ class _DetailsState extends State<Details> {
                           children: [
                             InkWell(
                               overlayColor:
-                                  MaterialStateProperty.all(Colors.transparent),
+                                  WidgetStateProperty.all(Colors.transparent),
                               onTap: () {
                                 setState(() {
                                   select = 0;
@@ -82,7 +82,7 @@ class _DetailsState extends State<Details> {
                               },
                               child: Column(
                                 children: [
-                                  Text(
+                                  const Text(
                                     "Goods",
                                     style: TextStyle(
                                       color: Colors.white,
@@ -105,7 +105,7 @@ class _DetailsState extends State<Details> {
                             ),
                             InkWell(
                               overlayColor:
-                                  MaterialStateProperty.all(Colors.transparent),
+                                  WidgetStateProperty.all(Colors.transparent),
                               onTap: () {
                                 setState(() {
                                   select = 1;
@@ -113,7 +113,7 @@ class _DetailsState extends State<Details> {
                               },
                               child: Column(
                                 children: [
-                                  Text(
+                                  const Text(
                                     "Reviews",
                                     style: TextStyle(
                                       color: Colors.white,
@@ -136,7 +136,7 @@ class _DetailsState extends State<Details> {
                             )
                           ],
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 45,
                         ),
                       ],
@@ -145,12 +145,12 @@ class _DetailsState extends State<Details> {
                         ? SingleChildScrollView(
                             child: Column(
                               children: [
-                                Row(
+                                const Row(
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
                                   children: [
                                     Padding(
-                                      padding: const EdgeInsets.symmetric(
+                                      padding: EdgeInsets.symmetric(
                                           horizontal: 7),
                                       child: Text(
                                         "CROP TOP DRAGON TOTEM PRINT LETTERS DESIGN",
@@ -162,15 +162,15 @@ class _DetailsState extends State<Details> {
                                     ),
                                   ],
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   height: 15,
                                 ),
                                 Row(
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
                                   children: [
-                                    Padding(
-                                      padding: const EdgeInsets.symmetric(
+                                    const Padding(
+                                      padding: EdgeInsets.symmetric(
                                           horizontal: 7),
                                       child: Text(
                                         "US\$9.00",
@@ -187,7 +187,7 @@ class _DetailsState extends State<Details> {
                                         children: [
                                           InkWell(
                                             overlayColor:
-                                                MaterialStateProperty.all(
+                                                WidgetStateProperty.all(
                                                     Colors.transparent),
                                             onTap: () {
                                               if (s1 == false) {
@@ -197,27 +197,28 @@ class _DetailsState extends State<Details> {
                                                   s3 = false;
                                                   s4 = false;
                                                 });
-                                              } else
+                                              } else {
                                                 setState(() {
                                                   s1 = false;
                                                   s2 = false;
                                                   s3 = false;
                                                   s4 = false;
                                                 });
+                                              }
                                             },
                                             child: s1 == true
-                                                ? Icon(
+                                                ? const Icon(
                                                     Icons.star,
                                                     color: Colors.white,
                                                   )
-                                                : Icon(
+                                                : const Icon(
                                                     Icons.star_border,
                                                     color: Colors.white,
                                                   ),
                                           ),
                                           InkWell(
                                             overlayColor:
-                                                MaterialStateProperty.all(
+                                                WidgetStateProperty.all(
                                                     Colors.transparent),
                                             onTap: () {
                                               if (s2 == false) {
@@ -227,26 +228,27 @@ class _DetailsState extends State<Details> {
                                                   s3 = false;
                                                   s4 = false;
                                                 });
-                                              } else
+                                              } else {
                                                 setState(() {
                                                   s2 = false;
                                                   s3 = false;
                                                   s4 = false;
                                                 });
+                                              }
                                             },
                                             child: s2 == true
-                                                ? Icon(
+                                                ? const Icon(
                                                     Icons.star,
                                                     color: Colors.white,
                                                   )
-                                                : Icon(
+                                                : const Icon(
                                                     Icons.star_border,
                                                     color: Colors.white,
                                                   ),
                                           ),
                                           InkWell(
                                             overlayColor:
-                                                MaterialStateProperty.all(
+                                                WidgetStateProperty.all(
                                                     Colors.transparent),
                                             onTap: () {
                                               if (s3 == false) {
@@ -256,25 +258,26 @@ class _DetailsState extends State<Details> {
                                                   s3 = true;
                                                   s4 = false;
                                                 });
-                                              } else
+                                              } else {
                                                 setState(() {
                                                   s3 = false;
                                                   s4 = false;
                                                 });
+                                              }
                                             },
                                             child: s3 == true
-                                                ? Icon(
+                                                ? const Icon(
                                                     Icons.star,
                                                     color: Colors.white,
                                                   )
-                                                : Icon(
+                                                : const Icon(
                                                     Icons.star_border,
                                                     color: Colors.white,
                                                   ),
                                           ),
                                           InkWell(
                                             overlayColor:
-                                                MaterialStateProperty.all(
+                                                WidgetStateProperty.all(
                                                     Colors.transparent),
                                             onTap: () {
                                               if (s4 == false) {
@@ -284,17 +287,18 @@ class _DetailsState extends State<Details> {
                                                   s3 = true;
                                                   s4 = true;
                                                 });
-                                              } else
+                                              } else {
                                                 setState(() {
                                                   s4 = false;
                                                 });
+                                              }
                                             },
                                             child: s4 == true
-                                                ? Icon(
+                                                ? const Icon(
                                                     Icons.star,
                                                     color: Colors.white,
                                                   )
-                                                : Icon(
+                                                : const Icon(
                                                     Icons.star_border,
                                                     color: Colors.white,
                                                   ),
@@ -304,14 +308,14 @@ class _DetailsState extends State<Details> {
                                     ),
                                   ],
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   height: 20,
                                 ),
-                                Row(
+                                const Row(
                                   mainAxisAlignment: MainAxisAlignment.start,
                                   children: [
                                     Padding(
-                                      padding: const EdgeInsets.symmetric(
+                                      padding: EdgeInsets.symmetric(
                                           horizontal: 7),
                                       child: Text(
                                         "Color:",
@@ -330,7 +334,7 @@ class _DetailsState extends State<Details> {
                                     ),
                                   ],
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   height: 15,
                                 ),
                                 Padding(
@@ -363,7 +367,7 @@ class _DetailsState extends State<Details> {
                                           ),
                                         ),
                                       ),
-                                      SizedBox(
+                                      const SizedBox(
                                         width: 20,
                                       ),
                                       InkWell(
@@ -392,7 +396,7 @@ class _DetailsState extends State<Details> {
                                           ),
                                         ),
                                       ),
-                                      SizedBox(
+                                      const SizedBox(
                                         width: 20,
                                       ),
                                       InkWell(
@@ -421,7 +425,7 @@ class _DetailsState extends State<Details> {
                                           ),
                                         ),
                                       ),
-                                      SizedBox(
+                                      const SizedBox(
                                         width: 20,
                                       ),
                                       InkWell(
@@ -453,17 +457,17 @@ class _DetailsState extends State<Details> {
                                     ],
                                   ),
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   height: 20,
                                 ),
                                 Column(
                                   children: [
-                                    Row(
+                                    const Row(
                                       mainAxisAlignment:
                                           MainAxisAlignment.start,
                                       children: [
                                         Padding(
-                                          padding: const EdgeInsets.symmetric(
+                                          padding: EdgeInsets.symmetric(
                                               horizontal: 7),
                                           child: Text(
                                             "Size",
@@ -475,7 +479,7 @@ class _DetailsState extends State<Details> {
                                         ),
                                       ],
                                     ),
-                                    SizedBox(
+                                    const SizedBox(
                                       height: 18,
                                     ),
                                     Padding(
@@ -520,7 +524,7 @@ class _DetailsState extends State<Details> {
                                               ),
                                             ),
                                           ),
-                                          SizedBox(
+                                          const SizedBox(
                                             width: 15,
                                           ),
                                           InkWell(
@@ -557,7 +561,7 @@ class _DetailsState extends State<Details> {
                                               ),
                                             ),
                                           ),
-                                          SizedBox(
+                                          const SizedBox(
                                             width: 15,
                                           ),
                                           InkWell(
@@ -594,7 +598,7 @@ class _DetailsState extends State<Details> {
                                               ),
                                             ),
                                           ),
-                                          SizedBox(
+                                          const SizedBox(
                                             width: 15,
                                           ),
                                           InkWell(
@@ -636,14 +640,14 @@ class _DetailsState extends State<Details> {
                                     ),
                                   ],
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   height: 10,
                                 ),
                                 Divider(
                                   thickness: 7,
                                   color: Colors.grey.shade900,
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   height: 10,
                                 ),
                                 InkWell(
@@ -658,10 +662,10 @@ class _DetailsState extends State<Details> {
                                         color: Colors.green.shade700,
                                         size: 30,
                                       ),
-                                      SizedBox(
+                                      const SizedBox(
                                         width: 15,
                                       ),
-                                      Text(
+                                      const Text(
                                         "Return Police",
                                         style: TextStyle(
                                           color: Colors.white,
@@ -669,9 +673,9 @@ class _DetailsState extends State<Details> {
                                           fontWeight: FontWeight.w500,
                                         ),
                                       ),
-                                      Spacer(),
-                                      Padding(
-                                        padding: const EdgeInsets.all(8.0),
+                                      const Spacer(),
+                                      const Padding(
+                                        padding: EdgeInsets.all(8.0),
                                         child: Icon(
                                           Icons.arrow_forward_ios_outlined,
                                           color: Colors.white,
@@ -680,14 +684,14 @@ class _DetailsState extends State<Details> {
                                     ],
                                   ),
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   height: 10,
                                 ),
                                 Divider(
                                   thickness: 7,
                                   color: Colors.grey.shade900,
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   height: 10,
                                 ),
                                 InkWell(
@@ -701,7 +705,7 @@ class _DetailsState extends State<Details> {
                                     child: Row(
                                       mainAxisAlignment: MainAxisAlignment.start,
                                       children: [
-                                        Text(
+                                        const Text(
                                           "Description",
                                           style: TextStyle(
                                             color: Colors.white,
@@ -709,13 +713,13 @@ class _DetailsState extends State<Details> {
                                             fontWeight: FontWeight.w500,
                                           ),
                                         ),
-                                        SizedBox(
+                                        const SizedBox(
                                           width: 5,
                                         ),
-                                        Spacer(),
-                                        Container(
+                                        const Spacer(),
+                                        SizedBox(
                                           width: MediaQuery.of(context).size.width*0.5,
-                                          child: Text(
+                                          child: const Text(
                                             "#High Stretch #Stand Collar #5 khjhhgkk",
                                             style: TextStyle(
                                               color: Colors.white,
@@ -725,7 +729,7 @@ class _DetailsState extends State<Details> {
                                             overflow: TextOverflow.ellipsis,
                                           ),
                                         ),
-                                        SizedBox(
+                                        const SizedBox(
                                           width: 2,
                                         ),
                                         
@@ -733,14 +737,14 @@ class _DetailsState extends State<Details> {
                                     ),
                                   ),
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   height: 10,
                                 ),
                                 Divider(
                                   thickness: 2,
                                   color: Colors.grey.shade900,
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   height: 5,
                                 ),
                                 Padding(
@@ -754,10 +758,10 @@ class _DetailsState extends State<Details> {
                                             AssetImage(widget.image.toString()),
                                         radius: 30,
                                       ),
-                                      SizedBox(
+                                      const SizedBox(
                                         width: 15,
                                       ),
-                                      Column(
+                                      const Column(
                                         crossAxisAlignment:
                                             CrossAxisAlignment.start,
                                         children: [
@@ -795,7 +799,7 @@ class _DetailsState extends State<Details> {
                                     ],
                                   ),
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   height: 10,
                                 ),
                                 Divider(
@@ -806,15 +810,15 @@ class _DetailsState extends State<Details> {
                             ),
                           )
                         : SingleChildScrollView(
-                            physics: NeverScrollableScrollPhysics(),
+                            physics: const NeverScrollableScrollPhysics(),
                             child: Column(
                               children: [
-                                SizedBox(
+                                const SizedBox(
                                   height: 10,
                                 ),
-                                Padding(
+                                const Padding(
                                   padding:
-                                      const EdgeInsets.symmetric(horizontal: 7),
+                                      EdgeInsets.symmetric(horizontal: 7),
                                   child: Row(
                                     mainAxisAlignment: MainAxisAlignment.start,
                                     children: [
@@ -829,12 +833,13 @@ class _DetailsState extends State<Details> {
                                     ],
                                   ),
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   height: 15,
                                 ),
-                                Container(
+                                SizedBox(
                                   height: MediaQuery.of(context).size.height,
                                   child: ListView.builder(
+                                    // ignore: avoid_types_as_parameter_names
                                     itemBuilder: (context, int) {
                                       return comment();
                                     },
@@ -866,18 +871,19 @@ class _DetailsState extends State<Details> {
                           setState(() {
                             h = true;
                           });
-                        } else
+                        } else {
                           setState(() {
                             h = false;
                           });
+                        }
                       },
                       child: h == false
-                          ? Icon(
+                          ? const Icon(
                               Icons.favorite_border_outlined,
                               color: Colors.black,
                               size: 35,
                             )
-                          : Icon(
+                          : const Icon(
                               Icons.favorite_outlined,
                               color: Colors.black,
                               size: 35,
@@ -891,7 +897,7 @@ class _DetailsState extends State<Details> {
                         width: MediaQuery.of(context).size.width * 0.6,
                         height: 40,
                         color: Colors.black,
-                        child: Center(
+                        child: const Center(
                           child: Text(
                             "ADD TO BAG",
                             style: TextStyle(
@@ -919,7 +925,7 @@ class _DetailsState extends State<Details> {
       backgroundColor: Colors.black,
       context: context,
       builder: ((context) {
-        return Container(
+        return SizedBox(
           height: MediaQuery.of(context).size.height * 0.8,
           child: SingleChildScrollView(
             child: Column(
@@ -933,12 +939,12 @@ class _DetailsState extends State<Details> {
                       InkWell(
                         overlayColor:
                             MaterialStateProperty.all(Colors.transparent),
-                        child: Icon(
+                        child: const Icon(
                           Icons.close,
                           color: Colors.black,
                         ),
                       ),
-                      Text(
+                      const Text(
                         "Description",
                         style: TextStyle(
                             color: Colors.white,
@@ -951,7 +957,7 @@ class _DetailsState extends State<Details> {
                         onTap: () {
                           Navigator.of(context).pop();
                         },
-                        child: Icon(
+                        child: const Icon(
                           Icons.close,
                           color: Colors.white,
                           size: 30,
@@ -971,9 +977,9 @@ class _DetailsState extends State<Details> {
                     children: [
                       Row(
                         children: [
-                          Container(
+                          SizedBox(
                             width: MediaQuery.of(context).size.width * 0.4,
-                            child: Text(
+                            child: const Text(
                               "Style:",
                               style: TextStyle(
                                 color: Colors.white,
@@ -995,14 +1001,14 @@ class _DetailsState extends State<Details> {
                           )
                         ],
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 20,
                       ),
                       Row(
                         children: [
-                          Container(
+                          SizedBox(
                             width: MediaQuery.of(context).size.width * 0.4,
-                            child: Text(
+                            child: const Text(
                               "Color:",
                               style: TextStyle(
                                 color: Colors.white,
@@ -1024,14 +1030,14 @@ class _DetailsState extends State<Details> {
                           )
                         ],
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 20,
                       ),
                       Row(
                         children: [
-                          Container(
+                          SizedBox(
                             width: MediaQuery.of(context).size.width * 0.4,
-                            child: Text(
+                            child: const Text(
                               "Pattern Type:",
                               style: TextStyle(
                                 color: Colors.white,
@@ -1053,14 +1059,14 @@ class _DetailsState extends State<Details> {
                           )
                         ],
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 20,
                       ),
                       Row(
                         children: [
-                          Container(
+                          SizedBox(
                             width: MediaQuery.of(context).size.width * 0.4,
-                            child: Text(
+                            child: const Text(
                               "Length:",
                               style: TextStyle(
                                 color: Colors.white,
@@ -1082,14 +1088,14 @@ class _DetailsState extends State<Details> {
                           )
                         ],
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 20,
                       ),
                       Row(
                         children: [
-                          Container(
+                          SizedBox(
                             width: MediaQuery.of(context).size.width * 0.4,
-                            child: Text(
+                            child: const Text(
                               "Season:",
                               style: TextStyle(
                                 color: Colors.white,
@@ -1111,14 +1117,14 @@ class _DetailsState extends State<Details> {
                           )
                         ],
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 20,
                       ),
                       Row(
                         children: [
-                          Container(
+                          SizedBox(
                             width: MediaQuery.of(context).size.width * 0.4,
-                            child: Text(
+                            child: const Text(
                               "Type:",
                               style: TextStyle(
                                 color: Colors.white,
@@ -1140,14 +1146,14 @@ class _DetailsState extends State<Details> {
                           )
                         ],
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 20,
                       ),
                       Row(
                         children: [
-                          Container(
+                          SizedBox(
                             width: MediaQuery.of(context).size.width * 0.4,
-                            child: Text(
+                            child: const Text(
                               "Details:",
                               style: TextStyle(
                                 color: Colors.white,
@@ -1169,14 +1175,14 @@ class _DetailsState extends State<Details> {
                           )
                         ],
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 20,
                       ),
                       Row(
                         children: [
-                          Container(
+                          SizedBox(
                             width: MediaQuery.of(context).size.width * 0.4,
-                            child: Text(
+                            child: const Text(
                               "Sleeve Length:",
                               style: TextStyle(
                                 color: Colors.white,
@@ -1198,14 +1204,14 @@ class _DetailsState extends State<Details> {
                           )
                         ],
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 20,
                       ),
                       Row(
                         children: [
-                          Container(
+                          SizedBox(
                             width: MediaQuery.of(context).size.width * 0.4,
-                            child: Text(
+                            child: const Text(
                               "Sleeve Type:",
                               style: TextStyle(
                                 color: Colors.white,
@@ -1227,14 +1233,14 @@ class _DetailsState extends State<Details> {
                           )
                         ],
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 20,
                       ),
                       Row(
                         children: [
-                          Container(
+                          SizedBox(
                             width: MediaQuery.of(context).size.width * 0.4,
-                            child: Text(
+                            child: const Text(
                               "Fit Type:",
                               style: TextStyle(
                                 color: Colors.white,
@@ -1256,14 +1262,14 @@ class _DetailsState extends State<Details> {
                           )
                         ],
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 20,
                       ),
                       Row(
                         children: [
-                          Container(
+                          SizedBox(
                             width: MediaQuery.of(context).size.width * 0.4,
-                            child: Text(
+                            child: const Text(
                               "Sheer:",
                               style: TextStyle(
                                 color: Colors.white,
@@ -1285,14 +1291,14 @@ class _DetailsState extends State<Details> {
                           )
                         ],
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 20,
                       ),
                       Row(
                         children: [
-                          Container(
+                          SizedBox(
                             width: MediaQuery.of(context).size.width * 0.4,
-                            child: Text(
+                            child: const Text(
                               "Placket:",
                               style: TextStyle(
                                 color: Colors.white,
@@ -1314,14 +1320,14 @@ class _DetailsState extends State<Details> {
                           )
                         ],
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 20,
                       ),
                       Row(
                         children: [
-                          Container(
+                          SizedBox(
                             width: MediaQuery.of(context).size.width * 0.4,
-                            child: Text(
+                            child: const Text(
                               "Material:",
                               style: TextStyle(
                                 color: Colors.white,
@@ -1343,14 +1349,14 @@ class _DetailsState extends State<Details> {
                           )
                         ],
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 20,
                       ),
                       Row(
                         children: [
-                          Container(
+                          SizedBox(
                             width: MediaQuery.of(context).size.width * 0.4,
-                            child: Text(
+                            child: const Text(
                               "Composition:",
                               style: TextStyle(
                                 color: Colors.white,
@@ -1372,14 +1378,14 @@ class _DetailsState extends State<Details> {
                           )
                         ],
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 20,
                       ),
                       Row(
                         children: [
-                          Container(
+                          SizedBox(
                             width: MediaQuery.of(context).size.width * 0.4,
-                            child: Text(
+                            child: const Text(
                               "Fabric:",
                               style: TextStyle(
                                 color: Colors.white,
@@ -1401,14 +1407,14 @@ class _DetailsState extends State<Details> {
                           )
                         ],
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 20,
                       ),
                       Row(
                         children: [
-                          Container(
+                          SizedBox(
                             width: MediaQuery.of(context).size.width * 0.4,
-                            child: Text(
+                            child: const Text(
                               "Care Instructions:",
                               style: TextStyle(
                                 color: Colors.white,
@@ -1419,7 +1425,7 @@ class _DetailsState extends State<Details> {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.start,
                             children: [
-                              Container(
+                              SizedBox(
                                 width: MediaQuery.of(context).size.width * 0.55,
                                 child: Text(
                                   "Machine Wash Or Professional Dry Clean",
@@ -1433,14 +1439,14 @@ class _DetailsState extends State<Details> {
                           )
                         ],
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 20,
                       ),
                       Row(
                         children: [
-                          Container(
+                          SizedBox(
                             width: MediaQuery.of(context).size.width * 0.4,
-                            child: Text(
+                            child: const Text(
                               "SKU:",
                               style: TextStyle(
                                 color: Colors.white,
@@ -1462,14 +1468,14 @@ class _DetailsState extends State<Details> {
                           )
                         ],
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 20,
                       ),
                       Row(
                         children: [
-                          Container(
+                          SizedBox(
                             width: MediaQuery.of(context).size.width * 0.4,
-                            child: Text(
+                            child: const Text(
                               "Season:",
                               style: TextStyle(
                                 color: Colors.white,
@@ -1491,7 +1497,7 @@ class _DetailsState extends State<Details> {
                           )
                         ],
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 20,
                       ),
                     ],
@@ -1513,14 +1519,14 @@ class _DetailsState extends State<Details> {
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 7),
+              const Padding(
+                padding: EdgeInsets.symmetric(horizontal: 7),
                 child: CircleAvatar(
                   backgroundImage: AssetImage("assets/h.jpg"),
                   radius: 30,
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 width: 10,
               ),
               Column(
@@ -1529,9 +1535,9 @@ class _DetailsState extends State<Details> {
                   Row(
                     // mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Container(
+                      SizedBox(
                         width: MediaQuery.of(context).size.width * 0.5,
-                        child: Text(
+                        child: const Text(
                           "Andre Young",
                           style: TextStyle(
                             color: Colors.white,
@@ -1553,20 +1559,21 @@ class _DetailsState extends State<Details> {
                                   s3 = false;
                                   s4 = false;
                                 });
-                              } else
+                              } else {
                                 setState(() {
                                   s1 = false;
                                   s2 = false;
                                   s3 = false;
                                   s4 = false;
                                 });
+                              }
                             },
                             child: s1 == true
-                                ? Icon(
+                                ? const Icon(
                                     Icons.star,
                                     color: Colors.white,
                                   )
-                                : Icon(
+                                : const Icon(
                                     Icons.star_border,
                                     color: Colors.white,
                                   ),
@@ -1582,19 +1589,20 @@ class _DetailsState extends State<Details> {
                                   s3 = false;
                                   s4 = false;
                                 });
-                              } else
+                              } else {
                                 setState(() {
                                   s2 = false;
                                   s3 = false;
                                   s4 = false;
                                 });
+                              }
                             },
                             child: s2 == true
-                                ? Icon(
+                                ? const Icon(
                                     Icons.star,
                                     color: Colors.white,
                                   )
-                                : Icon(
+                                : const Icon(
                                     Icons.star_border,
                                     color: Colors.white,
                                   ),
@@ -1610,18 +1618,19 @@ class _DetailsState extends State<Details> {
                                   s3 = true;
                                   s4 = false;
                                 });
-                              } else
+                              } else {
                                 setState(() {
                                   s3 = false;
                                   s4 = false;
                                 });
+                              }
                             },
                             child: s3 == true
-                                ? Icon(
+                                ? const Icon(
                                     Icons.star,
                                     color: Colors.white,
                                   )
-                                : Icon(
+                                : const Icon(
                                     Icons.star_border,
                                     color: Colors.white,
                                   ),
@@ -1637,17 +1646,18 @@ class _DetailsState extends State<Details> {
                                   s3 = true;
                                   s4 = true;
                                 });
-                              } else
+                              } else {
                                 setState(() {
                                   s4 = false;
                                 });
+                              }
                             },
                             child: s4 == true
-                                ? Icon(
+                                ? const Icon(
                                     Icons.star,
                                     color: Colors.white,
                                   )
-                                : Icon(
+                                : const Icon(
                                     Icons.star_border,
                                     color: Colors.white,
                                   ),
@@ -1656,12 +1666,12 @@ class _DetailsState extends State<Details> {
                       ),
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
-                  Container(
+                  SizedBox(
                     width: MediaQuery.of(context).size.width * 0.75,
-                    child: Text(
+                    child: const Text(
                       "Wonderful glasses, perfect gift for my girl for our anniversary!",
                       softWrap: true,
                       maxLines: 7,
@@ -1676,7 +1686,7 @@ class _DetailsState extends State<Details> {
             ],
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 35,
         ),
       ],

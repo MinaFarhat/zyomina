@@ -1,5 +1,5 @@
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
+// ignore_for_file: deprecated_member_use
+
 import 'package:flutter/material.dart';
 import 'package:zyo/connecttous.dart';
 import 'package:zyo/deleteaccount.dart';
@@ -25,12 +25,12 @@ class _SettingsState extends State<Settings> {
         body: SingleChildScrollView(
           child: Column(
             children: [
-              SizedBox(
+              const SizedBox(
                 height: 15,
               ),
-              Padding(
+              const Padding(
                 padding:
-                    const EdgeInsets.symmetric(horizontal: 18, vertical: 5),
+                    EdgeInsets.symmetric(horizontal: 18, vertical: 5),
                 child: Text(
                   "Settings",
                   style: TextStyle(
@@ -40,7 +40,7 @@ class _SettingsState extends State<Settings> {
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 30,
               ),
               InkWell(
@@ -48,12 +48,12 @@ class _SettingsState extends State<Settings> {
                 onTap: () {
                   Navigator.of(context)
                       .push(MaterialPageRoute(builder: (context) {
-                    return Namescreen();
+                    return const Namescreen();
                   }));
                 },
-                child: Padding(
+                child: const Padding(
                   padding:
-                      const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
+                      EdgeInsets.symmetric(horizontal: 20, vertical: 8),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -72,19 +72,19 @@ class _SettingsState extends State<Settings> {
                   ),
                 ),
               ),
-              SizedBox(height: 45),
-              SizedBox(height: 10),
+              const SizedBox(height: 45),
+              const SizedBox(height: 10),
               InkWell(
                 overlayColor: MaterialStateProperty.all(Colors.transparent),
                 onTap: () {
                   Navigator.of(context)
                       .push(MaterialPageRoute(builder: (context) {
-                    return Myaddress();
+                    return const Myaddress();
                   }));
                 },
-                child: Padding(
+                child: const Padding(
                   padding:
-                      const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
+                      EdgeInsets.symmetric(horizontal: 20, vertical: 8),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -103,24 +103,24 @@ class _SettingsState extends State<Settings> {
                   ),
                 ),
               ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               Divider(
                 color: Colors.grey.shade900,
                 thickness: 1,
                 height: 2,
               ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               InkWell(
                 overlayColor: MaterialStateProperty.all(Colors.transparent),
                 onTap: () {
                   Navigator.of(context)
                       .push(MaterialPageRoute(builder: (context) {
-                    return Ghangepassword();
+                    return const Ghangepassword();
                   }));
                 },
-                child: Padding(
+                child: const Padding(
                   padding:
-                      const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
+                      EdgeInsets.symmetric(horizontal: 20, vertical: 8),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -139,24 +139,24 @@ class _SettingsState extends State<Settings> {
                   ),
                 ),
               ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               Divider(
                 color: Colors.grey.shade900,
                 thickness: 1,
                 height: 2,
               ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               InkWell(
                 overlayColor: MaterialStateProperty.all(Colors.transparent),
                 onTap: () {
                   Navigator.of(context)
                       .push(MaterialPageRoute(builder: (context) {
-                    return Deleteaccount();
+                    return const Deleteaccount();
                   }));
                 },
-                child: Padding(
+                child: const Padding(
                   padding:
-                      const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
+                      EdgeInsets.symmetric(horizontal: 20, vertical: 8),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -175,14 +175,14 @@ class _SettingsState extends State<Settings> {
                   ),
                 ),
               ),
-              SizedBox(height: 5),
+              const SizedBox(height: 5),
               Divider(
                 color: Colors.grey.shade900,
                 thickness: 1,
                 height: 2,
               ),
-              SizedBox(height: 30),
-              SizedBox(height: 10),
+              const SizedBox(height: 30),
+              const SizedBox(height: 10),
               InkWell(
                 overlayColor: MaterialStateProperty.all(Colors.transparent),
                 onTap: () {},
@@ -192,14 +192,14 @@ class _SettingsState extends State<Settings> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text(
+                      const Text(
                         "Conuntry/Region",
                         style: TextStyle(
                             color: Colors.white,
                             fontSize: 15,
                             fontWeight: FontWeight.w400),
                       ),
-                      Spacer(),
+                      const Spacer(),
                       Text(
                         "LB",
                         style: TextStyle(
@@ -208,8 +208,8 @@ class _SettingsState extends State<Settings> {
                           fontWeight: FontWeight.w400,
                         ),
                       ),
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
                         child: InkWell(
                           child: Icon(
                             Icons.arrow_forward_ios_rounded,
@@ -221,20 +221,20 @@ class _SettingsState extends State<Settings> {
                   ),
                 ),
               ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               Divider(
                 color: Colors.grey.shade900,
                 thickness: 1,
                 height: 2,
               ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               InkWell(
                  overlayColor:
                               MaterialStateProperty.all(Colors.transparent),
                           onTap: () {
                             Navigator.of(context)
                                 .push(MaterialPageRoute(builder: (context) {
-                              return Language();
+                              return const Language();
                             }));
                           },
                 child: Padding(
@@ -243,14 +243,14 @@ class _SettingsState extends State<Settings> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text(
+                      const Text(
                         "Language",
                         style: TextStyle(
                             color: Colors.white,
                             fontSize: 15,
                             fontWeight: FontWeight.w400),
                       ),
-                      Spacer(),
+                      const Spacer(),
                       Text(
                         "English",
                         style: TextStyle(
@@ -259,7 +259,7 @@ class _SettingsState extends State<Settings> {
                           fontWeight: FontWeight.w400,
                         ),
                       ),
-                      Icon(
+                      const Icon(
                         Icons.arrow_forward_ios_rounded,
                         color: Colors.white,
                       ),
@@ -267,20 +267,20 @@ class _SettingsState extends State<Settings> {
                   ),
                 ),
               ),
-              SizedBox(height: 30),
-              SizedBox(height: 10),
+              const SizedBox(height: 30),
+              const SizedBox(height: 10),
               InkWell(
                  overlayColor:
                               MaterialStateProperty.all(Colors.transparent),
                           onTap: () {
                             Navigator.of(context)
                                 .push(MaterialPageRoute(builder: (context) {
-                              return Connecttous();
+                              return const Connecttous();
                             }));
                           },
-                child: Padding(
+                child: const Padding(
                   padding:
-                          const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
+                          EdgeInsets.symmetric(horizontal: 20, vertical: 8),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -299,20 +299,20 @@ class _SettingsState extends State<Settings> {
                   ),
                 ),
               ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               Divider(
                 color: Colors.grey.shade900,
                 thickness: 1,
                 height: 2,
               ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               InkWell(
                 overlayColor:
                               MaterialStateProperty.all(Colors.transparent),
                           onTap: () {},
-                child: Padding(
+                child: const Padding(
                   padding:
-                            const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
+                            EdgeInsets.symmetric(horizontal: 20, vertical: 8),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -331,13 +331,13 @@ class _SettingsState extends State<Settings> {
                   ),
                 ),
               ),
-              SizedBox(height: 18),
+              const SizedBox(height: 18),
               Container(
                 color: Colors.white,
                 width: MediaQuery.of(context).size.width,
                 height: 60,
                 child: InkWell(
-                  child: Center(
+                  child: const Center(
                     child: Text(
                       "SIGN OUT",
                       style: TextStyle(

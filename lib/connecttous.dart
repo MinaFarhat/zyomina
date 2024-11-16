@@ -1,7 +1,6 @@
-import 'package:flutter/cupertino.dart';
+// ignore_for_file: deprecated_member_use
+
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
 class Connecttous extends StatefulWidget {
   const Connecttous({super.key});
@@ -18,7 +17,7 @@ class _ConnecttousState extends State<Connecttous> {
         backgroundColor: Colors.black,
         body: Column(
           children: [
-            SizedBox(
+            const SizedBox(
               height: 15,
             ),
             Padding(
@@ -30,15 +29,15 @@ class _ConnecttousState extends State<Connecttous> {
                     onTap: () {
                       Navigator.of(context).pop();
                     },
-                    child: Icon(
+                    child: const Icon(
                       Icons.arrow_back_ios_new_rounded,
                       color: Colors.white,
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 15,
                   ),
-                  Text(
+                  const Text(
                     "Connect To Us",
                     style: TextStyle(
                       color: Colors.white,
@@ -58,7 +57,7 @@ class _ConnecttousState extends State<Connecttous> {
                 children: [
                   Row(
                     children: [
-                      Container(
+                      SizedBox(
                         width: 40,
                         height: 40,
                         child: Image.asset("assets/Facebook1.png"),
@@ -66,7 +65,7 @@ class _ConnecttousState extends State<Connecttous> {
                       SizedBox(
                         width: MediaQuery.of(context).size.height * 0.015,
                       ),
-                      Text(
+                      const Text(
                         "Facebook",
                         style: TextStyle(
                           color: Colors.white,
@@ -76,7 +75,7 @@ class _ConnecttousState extends State<Connecttous> {
                       )
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 20,
                   ),
                   Row(
@@ -87,7 +86,7 @@ class _ConnecttousState extends State<Connecttous> {
                             color: Colors.white),
                         width: 37,
                         height: 37,
-                        child: Center(
+                        child: const Center(
                           child: Text(
                             "ZYO",
                             style: TextStyle(
@@ -101,7 +100,7 @@ class _ConnecttousState extends State<Connecttous> {
                       SizedBox(
                         width: MediaQuery.of(context).size.height * 0.015,
                       ),
-                      Text(
+                      const Text(
                         "ZYO",
                         style: TextStyle(
                           color: Colors.white,
@@ -109,7 +108,7 @@ class _ConnecttousState extends State<Connecttous> {
                           fontWeight: FontWeight.w500,
                         ),
                       ),
-                      Spacer(),
+                      const Spacer(),
                       InkWell(
                         onTap: () {},
                         overlayColor:
@@ -121,7 +120,7 @@ class _ConnecttousState extends State<Connecttous> {
                           ),
                           width: 80,
                           height: 26,
-                          child: Center(
+                          child: const Center(
                             child: Text(
                               "Follow",
                               style: TextStyle(
@@ -147,7 +146,7 @@ class _ConnecttousState extends State<Connecttous> {
                 children: [
                   Row(
                     children: [
-                      Container(
+                      SizedBox(
                         width: 40,
                         height: 40,
                         child: Image.asset("assets/instagram1.jpg"),
@@ -155,7 +154,7 @@ class _ConnecttousState extends State<Connecttous> {
                       SizedBox(
                         width: MediaQuery.of(context).size.height * 0.018,
                       ),
-                      Text(
+                      const Text(
                         "Instagram",
                         style: TextStyle(
                           color: Colors.white,
@@ -165,7 +164,7 @@ class _ConnecttousState extends State<Connecttous> {
                       )
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 20,
                   ),
                   Row(
@@ -176,7 +175,7 @@ class _ConnecttousState extends State<Connecttous> {
                             color: Colors.white),
                         width: 37,
                         height: 37,
-                        child: Center(
+                        child: const Center(
                           child: Text(
                             "ZYO",
                             style: TextStyle(
@@ -190,7 +189,7 @@ class _ConnecttousState extends State<Connecttous> {
                       SizedBox(
                         width: MediaQuery.of(context).size.height * 0.015,
                       ),
-                      Text(
+                      const Text(
                         "Zyooffcial",
                         style: TextStyle(
                           color: Colors.white,
@@ -198,7 +197,7 @@ class _ConnecttousState extends State<Connecttous> {
                           fontWeight: FontWeight.w500,
                         ),
                       ),
-                      Spacer(),
+                      const Spacer(),
                       InkWell(
                         onTap: () {},
                         overlayColor:
@@ -210,7 +209,7 @@ class _ConnecttousState extends State<Connecttous> {
                           ),
                           width: 80,
                           height: 26,
-                          child: Center(
+                          child: const Center(
                             child: Text(
                               "Follow",
                               style: TextStyle(
@@ -236,7 +235,7 @@ class _ConnecttousState extends State<Connecttous> {
                 children: [
                   Row(
                     children: [
-                      Container(
+                      SizedBox(
                         width: 40,
                         height: 40,
                         child: Image.asset("assets/twitter.png"),
@@ -244,7 +243,7 @@ class _ConnecttousState extends State<Connecttous> {
                       SizedBox(
                         width: MediaQuery.of(context).size.height * 0.015,
                       ),
-                      Text(
+                      const Text(
                         "Twitter",
                         style: TextStyle(
                           color: Colors.white,
@@ -254,7 +253,7 @@ class _ConnecttousState extends State<Connecttous> {
                       )
                     ],
                   ),
-                  SizedBox(height: 20,),
+                  const SizedBox(height: 20,),
                   Row(
                     children: [
                       Container(
@@ -263,7 +262,7 @@ class _ConnecttousState extends State<Connecttous> {
                             color: Colors.white),
                         width: 37,
                         height: 37,
-                        child: Center(
+                        child: const Center(
                           child: Text(
                             "ZYO",
                             style: TextStyle(
@@ -274,10 +273,10 @@ class _ConnecttousState extends State<Connecttous> {
                           ),
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 15,
                       ),
-                      Text(
+                      const Text(
                         "ZYO_Offcial",
                         style: TextStyle(
                           color: Colors.white,
@@ -285,7 +284,7 @@ class _ConnecttousState extends State<Connecttous> {
                           fontWeight: FontWeight.w500,
                         ),
                       ),
-                      Spacer(),
+                      const Spacer(),
                       InkWell(
                         onTap: () {},
                         overlayColor:
@@ -297,7 +296,7 @@ class _ConnecttousState extends State<Connecttous> {
                           ),
                           width: 80,
                           height: 26,
-                          child: Center(
+                          child: const Center(
                             child: Text(
                               "Follow",
                               style: TextStyle(

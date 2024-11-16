@@ -1,7 +1,6 @@
-import 'package:flutter/cupertino.dart';
+// ignore_for_file: deprecated_member_use
+
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
 class Search extends StatefulWidget {
   const Search({super.key});
@@ -28,16 +27,16 @@ class _SearchState extends State<Search> {
                       Navigator.of(context).pop();
                     },
                     overlayColor: MaterialStateProperty.all(Colors.transparent),
-                    child: Icon(
+                    child: const Icon(
                       Icons.arrow_back_ios_new_rounded,
                       color: Colors.white,
                     ),
                   ),
-                  Container(
+                  SizedBox(
                     width: MediaQuery.of(context).size.width * 0.66,
                     height: 40,
                     child: TextFormField(
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontSize: 20,
                         color: Colors.black,
                       ),
@@ -54,7 +53,7 @@ class _SearchState extends State<Search> {
                       ),
                     ),
                   ),
-                  Text(
+                  const Text(
                     "Search",
                     style: TextStyle(
                       color: Colors.white,
@@ -64,7 +63,7 @@ class _SearchState extends State<Search> {
                 ],
               ),
             ),
-            SizedBox(height: 5,),
+            const SizedBox(height: 5,),
             Divider(color: Colors.grey.shade700,thickness: 2.5,),
           ],
         ),

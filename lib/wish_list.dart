@@ -1,5 +1,3 @@
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/material.dart';
 
 class Wishlist extends StatefulWidget {
@@ -88,10 +86,10 @@ class _WishlistState extends State<Wishlist> {
         backgroundColor: Colors.black,
         body: Column(
           children: [
-            SizedBox(
+            const SizedBox(
               height: 15,
             ),
-            Center(
+            const Center(
               child: Text(
                 "Wish List",
                 style: TextStyle(
@@ -101,13 +99,13 @@ class _WishlistState extends State<Wishlist> {
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 25,
             ),
             Expanded(
               child: GridView.builder(
                 itemCount: mina.length,
-                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
                   crossAxisSpacing: 0,
                   mainAxisSpacing: 10,
@@ -165,10 +163,10 @@ class _WishlistState extends State<Wishlist> {
                 radius: 13,
                 backgroundColor: Colors.grey.shade200,
                 child: Center(
-                  child:t==false? Icon(
+                  child:t==false? const Icon(
                     Icons.favorite_border,
                     color: Colors.black,
-                  ):Icon(
+                  ):const Icon(
                     Icons.favorite,
                     color: Colors.black,
                   )
@@ -177,21 +175,21 @@ class _WishlistState extends State<Wishlist> {
             ))
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 15,
           ),
           Text(
             mina[index]["price"],
-            style: TextStyle(color: Colors.white, fontSize: 17,fontWeight: FontWeight.w500),
+            style: const TextStyle(color: Colors.white, fontSize: 17,fontWeight: FontWeight.w500),
           ),
-            SizedBox(
+            const SizedBox(
             height: 10,
           ),
           Text(
             mina[index]["d"],
-            style: TextStyle(color: Colors.white, fontSize: 10),
+            style: const TextStyle(color: Colors.white, fontSize: 10),
           ),
-         SizedBox(
+         const SizedBox(
             height: 10,
           ),
           Row(
@@ -202,7 +200,7 @@ class _WishlistState extends State<Wishlist> {
                     choosen = 0;
                   });
                 },
-                overlayColor: MaterialStateProperty.all(Colors.transparent),
+                overlayColor: WidgetStateProperty.all(Colors.transparent),
                 child: Container(
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20),
@@ -215,7 +213,7 @@ class _WishlistState extends State<Wishlist> {
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 width: 10,
               ),
               InkWell(
@@ -224,7 +222,7 @@ class _WishlistState extends State<Wishlist> {
                     choosen = 1;
                   });
                 },
-                overlayColor: MaterialStateProperty.all(Colors.transparent),
+                overlayColor: WidgetStateProperty.all(Colors.transparent),
                 child: Container(
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20),

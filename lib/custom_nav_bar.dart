@@ -1,13 +1,9 @@
 import 'package:custom_navigation_bar/custom_navigation_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:zyo/categories.dart';
-import 'package:zyo/global.dart';
 import 'package:zyo/homescreen.dart';
 import 'package:zyo/new.dart';
 import 'package:zyo/settings.dart';
-import 'package:zyo/touch.dart';
 import 'package:zyo/wish_list.dart';
 
 class MyNavBar extends StatefulWidget {
@@ -18,7 +14,7 @@ class MyNavBar extends StatefulWidget {
 }
 
 class _MyNavBarState extends State<MyNavBar> {
-  final screens = [Homescreen(), Categories(),New(),Wishlist(),Settings()];
+  final screens = [const Homescreen(), const Categories(),const New(),const Wishlist(),const Settings()];
   int curentindex = 0;
   @override
   Widget build(BuildContext context) {

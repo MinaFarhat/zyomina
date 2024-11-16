@@ -1,7 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
 class Doneshopping extends StatelessWidget {
   const Doneshopping({super.key});
@@ -20,8 +17,8 @@ class Doneshopping extends StatelessWidget {
               color: Colors.white,
               size: MediaQuery.of(context).size.width*0.3,
             ),
-            SizedBox(height: 10,),
-            Text(
+            const SizedBox(height: 10,),
+            const Text(
               "ORDER CONFIRMED",
               style: TextStyle(
                 color: Colors.white,

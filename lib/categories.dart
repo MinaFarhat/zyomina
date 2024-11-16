@@ -1,12 +1,10 @@
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/material.dart';
-import 'package:zyo/custom_nav_bar.dart';
-import 'package:zyo/global.dart';
 import 'package:zyo/head.dart';
 import 'package:zyo/product.dart';
 
 class Categories extends StatefulWidget {
+  const Categories({super.key});
+
   @override
   State<Categories> createState() => _CategoriesState();
 }
@@ -73,14 +71,14 @@ class _CategoriesState extends State<Categories> {
         body: SingleChildScrollView(
           child: Column(
             children: [
-              SizedBox(
+              const SizedBox(
                 height: 15,
               ),
               header(context),
-              Head(),
+              const Head(),
               Row(
                 children: [
-                  Container(
+                  SizedBox(
                     height: MediaQuery.of(context).size.height * 0.7,
                     width: MediaQuery.of(context).size.width * 0.26,
                     child: ListView.builder(
@@ -120,12 +118,12 @@ class _CategoriesState extends State<Categories> {
                       },
                     ),
                   ),
-                  Spacer(),
-                  Container(
+                  const Spacer(),
+                  SizedBox(
                     height: MediaQuery.of(context).size.height * 0.7,
                     width: MediaQuery.of(context).size.width * 0.7,
                     child: GridView.builder(
-                      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                           childAspectRatio: 4 / 6,
                           mainAxisSpacing: 10,
                           crossAxisSpacing: 10,
@@ -150,14 +148,14 @@ class _CategoriesState extends State<Categories> {
                                   ),
                                 ),
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 height: 10,
                               ),
                               Expanded(
                                 flex: 1,
                                 child: Text(
                                   products[index].title,
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                     color: Colors.white,
                                     fontSize: 14,
                                   ),
@@ -186,17 +184,17 @@ class _CategoriesState extends State<Categories> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Icon(
+              const Icon(
                 Icons.mail_outline_rounded,
                 size: 27,
                 color: Colors.white,
               ),
-              Icon(
+              const Icon(
                 Icons.favorite_border_rounded,
                 size: 27,
                 color: Colors.white,
               ),
-              Container(
+              SizedBox(
                 width: MediaQuery.of(context).size.width * 0.66,
                 height: 50,
                 child: TextFormField(
@@ -219,7 +217,7 @@ class _CategoriesState extends State<Categories> {
                   ),
                 ),
               ),
-              Icon(
+              const Icon(
                 Icons.shopping_bag_outlined,
                 size: 27,
                 color: Colors.white,

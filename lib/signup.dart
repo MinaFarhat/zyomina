@@ -1,5 +1,6 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:flutter/material.dart';
-import 'package:flutter_signin_button/flutter_signin_button.dart';
 import 'package:zyo/custom_nav_bar.dart';
 
 class SignupScreen extends StatefulWidget {
@@ -21,9 +22,9 @@ class _SignupScreenState extends State<SignupScreen> {
         body: SingleChildScrollView(
           child: Column(
             children: [
-              SizedBox(height: 15,),
+              const SizedBox(height: 15,),
               _header(context),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               Row(
@@ -40,7 +41,7 @@ class _SignupScreenState extends State<SignupScreen> {
                             selectText = 0;
                           });
                         },
-                        child: Text(
+                        child: const Text(
                           "SIGN IN",
                           style: TextStyle(fontSize: 16, color: Colors.white),
                         ),
@@ -63,7 +64,7 @@ class _SignupScreenState extends State<SignupScreen> {
                             selectText = 1;
                           });
                         },
-                        child: Text(
+                        child: const Text(
                           "REGISTER",
                           style: TextStyle(fontSize: 16, color: Colors.white),
                         ),
@@ -80,17 +81,17 @@ class _SignupScreenState extends State<SignupScreen> {
               selectText == 0
                   ? Column(
                       children: [
-                        SizedBox(height: 40),
+                        const SizedBox(height: 40),
                         Padding(
                           padding: const EdgeInsets.all(4.0),
                           child: TextFormField(
                             enableSuggestions: true,
-                            style: TextStyle(color: Colors.white),
+                            style: const TextStyle(color: Colors.white),
                             cursorHeight: 25,
                             cursorColor: Colors.white,
                             decoration: InputDecoration(
                               focusColor: Colors.white,
-                              focusedBorder: UnderlineInputBorder(
+                              focusedBorder: const UnderlineInputBorder(
                                 borderSide:
                                     BorderSide(color: Colors.white, width: 5.0),
                               ),
@@ -104,19 +105,19 @@ class _SignupScreenState extends State<SignupScreen> {
                               hoverColor: Colors.white,
                               label: Text(
                                 "Email Address".toUpperCase(),
-                                style: TextStyle(
+                                style: const TextStyle(
                                     fontSize: 14, color: Colors.white),
                               ),
                             ),
                             keyboardType: TextInputType.emailAddress,
                           ),
                         ),
-                        SizedBox(height: 40),
+                        const SizedBox(height: 40),
                         Padding(
                           padding: const EdgeInsets.all(4.0),
                           child: TextFormField(
                             enableSuggestions: true,
-                            style: TextStyle(color: Colors.white),
+                            style: const TextStyle(color: Colors.white),
                             cursorHeight: 25,
                             cursorColor: Colors.white,
                             decoration: InputDecoration(
@@ -124,14 +125,14 @@ class _SignupScreenState extends State<SignupScreen> {
                               suffixIcon: InkWell(
                                 overlayColor: MaterialStateProperty.all(
                                     Colors.transparent),
-                                child: Icon(
+                                child: const Icon(
                                   Icons.remove_red_eye_outlined,
                                   color: Colors.white,
                                   size: 18,
                                 ),
                                 onTap: () {},
                               ),
-                              focusedBorder: UnderlineInputBorder(
+                              focusedBorder: const UnderlineInputBorder(
                                 borderSide:
                                     BorderSide(color: Colors.white, width: 5.0),
                               ),
@@ -146,7 +147,7 @@ class _SignupScreenState extends State<SignupScreen> {
                               hoverColor: Colors.white,
                               label: Text(
                                 "Password".toUpperCase(),
-                                style: TextStyle(
+                                style: const TextStyle(
                                     fontSize: 14, color: Colors.white),
                               ),
                             ),
@@ -161,15 +162,15 @@ class _SignupScreenState extends State<SignupScreen> {
                                   overlayColor: MaterialStateProperty.all(
                                       Colors.transparent)),
                               onPressed: () {},
-                              child: Text(
+                              child: const Text(
                                 "Forgot your password?",
                                 style: TextStyle(color: Colors.white,fontSize: 12),
                               ),
                             ),
                           ],
                         ),
-                        SizedBox(height: 40),
-                        Container(
+                        const SizedBox(height: 40),
+                        SizedBox(
                           width: 380,
                           height: 60,
                           child: ElevatedButton(
@@ -179,7 +180,7 @@ class _SignupScreenState extends State<SignupScreen> {
                               overlayColor:
                                   MaterialStateProperty.all(Colors.transparent),
                             ),
-                            child: Text(
+                            child: const Text(
                               "SIGN IN",
                               style: TextStyle(
                                 color: Colors.black,
@@ -189,12 +190,12 @@ class _SignupScreenState extends State<SignupScreen> {
                             ),
                             onPressed: () {
                               Navigator.of(context).push(MaterialPageRoute(builder: (context) {
-                                return MyNavBar();
+                                return const MyNavBar();
                               },));
                             },
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 210,
                         ),
                         Column(
@@ -211,15 +212,15 @@ class _SignupScreenState extends State<SignupScreen> {
                                   height: 2,
                                   width: 70,
                                 ),
-                                SizedBox(width: 8),
-                                Text(
+                                const SizedBox(width: 8),
+                                const Text(
                                   "Or join with",
                                   style: TextStyle(
                                     color: Colors.white,
                                     fontSize: 10
                                   ),
                                 ),
-                                SizedBox(width: 8),
+                                const SizedBox(width: 8),
                                 Container(
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(28),
@@ -230,12 +231,12 @@ class _SignupScreenState extends State<SignupScreen> {
                                 ),
                               ],
                             ),
-                            SizedBox(height: 5),
-                            Row(
+                            const SizedBox(height: 5),
+                            const Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Padding(
-                                  padding: const EdgeInsets.all(8.0),
+                                  padding: EdgeInsets.all(8.0),
                                   child: InkWell(
                                     child: CircleAvatar(
                                       backgroundColor: Colors.white,
@@ -246,7 +247,7 @@ class _SignupScreenState extends State<SignupScreen> {
                                   ),
                                 ),
                                 Padding(
-                                  padding: const EdgeInsets.all(8.0),
+                                  padding: EdgeInsets.all(8.0),
                                   child: InkWell(
                                     child: CircleAvatar(
                                       backgroundColor: Colors.white,
@@ -257,7 +258,7 @@ class _SignupScreenState extends State<SignupScreen> {
                                   ),
                                 ),
                                 Padding(
-                                  padding: const EdgeInsets.all(8.0),
+                                  padding: EdgeInsets.all(8.0),
                                   child: InkWell(
                                     child: CircleAvatar(
                                       backgroundColor: Colors.white,
@@ -275,17 +276,17 @@ class _SignupScreenState extends State<SignupScreen> {
                     )
                   : Column(
                       children: [
-                        SizedBox(height: 40),
+                        const SizedBox(height: 40),
                         Padding(
                           padding: const EdgeInsets.all(4.0),
                           child: TextFormField(
                             enableSuggestions: true,
-                            style: TextStyle(color: Colors.white),
+                            style: const TextStyle(color: Colors.white),
                             cursorHeight: 25,
                             cursorColor: Colors.white,
                             decoration: InputDecoration(
                               focusColor: Colors.white,
-                              focusedBorder: UnderlineInputBorder(
+                              focusedBorder: const UnderlineInputBorder(
                                 borderSide:
                                     BorderSide(color: Colors.white, width: 5.0),
                               ),
@@ -299,20 +300,20 @@ class _SignupScreenState extends State<SignupScreen> {
                               hoverColor: Colors.white,
                               label: Text(
                                 "Email Address".toUpperCase(),
-                                style: TextStyle(
+                                style: const TextStyle(
                                     fontSize: 14, color: Colors.white),
                               ),
                             ),
                             keyboardType: TextInputType.emailAddress,
                           ),
                         ),
-                        SizedBox(height: 40),
+                        const SizedBox(height: 40),
                         Padding(
                           padding: const EdgeInsets.all(4.0),
                           child: TextFormField(
                             
                             enableSuggestions: true,
-                            style: TextStyle(color: Colors.white),
+                            style: const TextStyle(color: Colors.white),
                             cursorHeight: 25,
                             cursorColor: Colors.white,
                             decoration: InputDecoration(
@@ -320,14 +321,14 @@ class _SignupScreenState extends State<SignupScreen> {
                               suffixIcon: InkWell(
                                 overlayColor: MaterialStateProperty.all(
                                     Colors.transparent),
-                                child: Icon(
+                                child: const Icon(
                                   Icons.remove_red_eye_outlined,
                                   color: Colors.white,
                                   size: 18,
                                 ),
                                 onTap: () {},
                               ),
-                              focusedBorder: UnderlineInputBorder(
+                              focusedBorder: const UnderlineInputBorder(
                                 borderSide:
                                     BorderSide(color: Colors.white, width: 5.0),
                               ),
@@ -342,14 +343,14 @@ class _SignupScreenState extends State<SignupScreen> {
                               hoverColor: Colors.white,
                               label: Text(
                                 "Password".toUpperCase(),
-                                style: TextStyle(
+                                style: const TextStyle(
                                     fontSize: 14, color: Colors.white),
                               ),
                             ),
                             keyboardType: TextInputType.visiblePassword,
                           ),
                         ),
-                        SizedBox(height: 10),
+                        const SizedBox(height: 10),
                         Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: Column(
@@ -358,11 +359,11 @@ class _SignupScreenState extends State<SignupScreen> {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 mainAxisAlignment: MainAxisAlignment.start,
                                 children: [
-                                  Container(
+                                  SizedBox(
                                     height: 50,
                                     child: Checkbox(
                                       checkColor: Colors.black,
-                                      shape: CircleBorder(),
+                                      shape: const CircleBorder(),
                                       splashRadius: 50,
                                       autofocus: true,
                                       fillColor: MaterialStateProperty.all(
@@ -383,7 +384,7 @@ class _SignupScreenState extends State<SignupScreen> {
                                   ),
                                   Row(
                                     children: [
-                                      Text(
+                                      const Text(
                                         "I agree to the",
                                         style: TextStyle(
                                           color: Colors.white,
@@ -408,16 +409,16 @@ class _SignupScreenState extends State<SignupScreen> {
                                   ),
                                 ],
                               ),
-                              SizedBox(height: 10),
+                              const SizedBox(height: 10),
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.start,
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                Container(
+                                SizedBox(
                                   height: 20,                                                        
                                   child:  Checkbox(
                                       checkColor: Colors.black,
-                                      shape: CircleBorder(),
+                                      shape: const CircleBorder(),
                                       autofocus: true,
                                       fillColor: MaterialStateProperty.all(
                                         Colors.white,
@@ -435,9 +436,9 @@ class _SignupScreenState extends State<SignupScreen> {
                                       },
                                     ),
                                 ),
-                                  Container(
+                                  SizedBox(
                                     width: MediaQuery.of(context).size.width*0.8,
-                                    child: Text(
+                                    child: const Text(
                                       maxLines: 4,
                                       softWrap: true,
                                       textAlign: TextAlign.justify,
@@ -454,7 +455,7 @@ class _SignupScreenState extends State<SignupScreen> {
                           ),
                         ),
                         SizedBox(height: MediaQuery.of(context).size.height*0.03),
-                        Container(
+                        SizedBox(
                           width: 380,
                           height: 60,
                           child: ElevatedButton(
@@ -464,7 +465,7 @@ class _SignupScreenState extends State<SignupScreen> {
                               overlayColor:
                                   MaterialStateProperty.all(Colors.transparent),
                             ),
-                            child: Text(
+                            child: const Text(
                               "REGISTER",
                               style: TextStyle(
                                 color: Colors.black,
@@ -474,7 +475,7 @@ class _SignupScreenState extends State<SignupScreen> {
                             ),
                             onPressed: () {
                                Navigator.of(context).push(MaterialPageRoute(builder: (context) {
-                                return MyNavBar();
+                                return const MyNavBar();
                               },));
                             },
                           ),
@@ -496,15 +497,15 @@ class _SignupScreenState extends State<SignupScreen> {
                                   height: 2,
                                   width: 70,
                                 ),
-                                SizedBox(width: 8),
-                                Text(
+                                const SizedBox(width: 8),
+                                const Text(
                                   "Or join with",
                                   style: TextStyle(
                                     color: Colors.white,
                                     fontSize: 10,
                                   ),
                                 ),
-                                SizedBox(width: 8),
+                                const SizedBox(width: 8),
                                 Container(
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(28),
@@ -515,12 +516,12 @@ class _SignupScreenState extends State<SignupScreen> {
                                 ),
                               ],
                             ),
-                            SizedBox(height: 5),
-                            Row(
+                            const SizedBox(height: 5),
+                            const Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Padding(
-                                  padding: const EdgeInsets.all(8.0),
+                                  padding: EdgeInsets.all(8.0),
                                   child: InkWell(
                                     child: CircleAvatar(
                                       backgroundColor: Colors.white,
@@ -531,7 +532,7 @@ class _SignupScreenState extends State<SignupScreen> {
                                   ),
                                 ),
                                 Padding(
-                                  padding: const EdgeInsets.all(8.0),
+                                  padding: EdgeInsets.all(8.0),
                                   child: InkWell(
                                     child: CircleAvatar(
                                       backgroundColor: Colors.white,
@@ -542,7 +543,7 @@ class _SignupScreenState extends State<SignupScreen> {
                                   ),
                                 ),
                                 Padding(
-                                  padding: const EdgeInsets.all(8.0),
+                                  padding: EdgeInsets.all(8.0),
                                   child: InkWell(
                                     child: CircleAvatar(
                                       backgroundColor: Colors.white,
@@ -554,8 +555,8 @@ class _SignupScreenState extends State<SignupScreen> {
                                 ),
                               ],
                             ),
-                            SizedBox(height: 10),
-                            Text(
+                            const SizedBox(height: 10),
+                            const Text(
                               "By joining, you agree to our Privacy & Cookie Policy",
                               style:
                                   TextStyle(color: Colors.white, fontSize: 10),
@@ -577,9 +578,9 @@ class _SignupScreenState extends State<SignupScreen> {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Icon(Icons.add,color: Colors.black,size: 40,),
+          const Icon(Icons.add,color: Colors.black,size: 40,),
         
-          Center(
+          const Center(
             child: Text(
               "ZYO",
               style: TextStyle(
@@ -595,7 +596,7 @@ class _SignupScreenState extends State<SignupScreen> {
             style: ButtonStyle(
                 overlayColor: MaterialStateProperty.all(Colors.transparent)),
             onPressed: () {},
-            child: Text(
+            child: const Text(
               "Skip",
               style: TextStyle(fontSize: 13, color: Colors.white),
             ),

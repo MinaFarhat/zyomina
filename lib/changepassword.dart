@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
 class Ghangepassword extends StatefulWidget {
   const Ghangepassword({super.key});
@@ -18,7 +16,7 @@ class _GhangepasswordState extends State<Ghangepassword> {
         body: SingleChildScrollView(
           child: Column(
             children: [
-              SizedBox(
+              const SizedBox(
                 height: 15,
               ),
               Padding(
@@ -28,19 +26,19 @@ class _GhangepasswordState extends State<Ghangepassword> {
                   children: [
                     InkWell(
                       overlayColor:
-                          MaterialStateProperty.all(Colors.transparent),
+                          WidgetStateProperty.all(Colors.transparent),
                       onTap: () {
                         Navigator.of(context).pop();
                       },
-                      child: Icon(
+                      child: const Icon(
                         Icons.arrow_back_ios_new_rounded,
                         color: Colors.white,
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 15,
                     ),
-                    Text(
+                    const Text(
                       "Change Password",
                       style: TextStyle(
                         color: Colors.white,
@@ -51,18 +49,18 @@ class _GhangepasswordState extends State<Ghangepassword> {
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 30,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               Padding(
-               padding: EdgeInsets.symmetric(horizontal: 15),
+               padding: const EdgeInsets.symmetric(horizontal: 15),
                 child: TextFormField(
                   keyboardType: TextInputType.visiblePassword,
                   enableSuggestions: true,
-                  style: TextStyle(
+                  style: const TextStyle(
                     color: Colors.white,
                     fontSize: 16,
                     fontWeight: FontWeight.w500,
@@ -86,15 +84,15 @@ class _GhangepasswordState extends State<Ghangepassword> {
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               Padding(
-                padding: EdgeInsets.symmetric(horizontal: 15),
+                padding: const EdgeInsets.symmetric(horizontal: 15),
                 child: TextFormField(
                   keyboardType: TextInputType.visiblePassword,
                   enableSuggestions: true,
-                  style: TextStyle(
+                  style: const TextStyle(
                     color: Colors.white,
                     fontSize: 16,
                     fontWeight: FontWeight.w500,
@@ -118,15 +116,15 @@ class _GhangepasswordState extends State<Ghangepassword> {
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               Padding(
-               padding: EdgeInsets.symmetric(horizontal: 15),
+               padding: const EdgeInsets.symmetric(horizontal: 15),
                 child: TextFormField(
                   keyboardType: TextInputType.visiblePassword,
                   enableSuggestions: true,
-                  style: TextStyle(
+                  style: const TextStyle(
                     color: Colors.white,
                     fontSize: 16,
                     fontWeight: FontWeight.w500,
@@ -158,7 +156,7 @@ class _GhangepasswordState extends State<Ghangepassword> {
                 width: MediaQuery.of(context).size.width * 0.90,
                 height: 60,
                 child: InkWell(
-                  child: Center(
+                  child: const Center(
                     child: Text(
                       "SUBMIT",
                       style: TextStyle(

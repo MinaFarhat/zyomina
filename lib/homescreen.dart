@@ -1,16 +1,9 @@
+// ignore_for_file: avoid_print, deprecated_member_use
+
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:smooth_page_indicator/smooth_page_indicator.dart';
-import 'package:custom_navigation_bar/custom_navigation_bar.dart';
-import 'package:zyo/categories.dart';
-import 'package:zyo/custom_nav_bar.dart';
-import 'package:zyo/global.dart';
 import 'package:zyo/head.dart';
-import 'package:zyo/new.dart';
-import 'package:zyo/product.dart';
-import 'package:zyo/settings.dart';
 import 'package:zyo/touch.dart';
-import 'package:zyo/wish_list.dart';
 
 import 'searchscreen.dart';
 
@@ -22,8 +15,8 @@ class Homescreen extends StatefulWidget {
 }
 
 class _HomescreenState extends State<Homescreen> {
-  CarouselController _controller = CarouselController();
-  ScrollController _scrollController = ScrollController();
+  //CarouselController _controller = CarouselController();
+  final ScrollController _scrollController = ScrollController();
 
   List<String> imglist = [
     "assets/m1(1).jpg",
@@ -44,7 +37,7 @@ class _HomescreenState extends State<Homescreen> {
               children: [
                 Text(
                   text,
-                  style: TextStyle(
+                  style: const TextStyle(
                     color: Colors.white,
                     fontSize: 16,
                     fontWeight: FontWeight.bold,
@@ -54,7 +47,7 @@ class _HomescreenState extends State<Homescreen> {
                   width: 20,
                   height: 13,
                   color: Colors.white,
-                  child: Center(
+                  child: const Center(
                     child: Text(
                       "OFF",
                       style: TextStyle(
@@ -81,42 +74,42 @@ class _HomescreenState extends State<Homescreen> {
   }
 
   List<Icon> iconlist = [
-    Icon(
+    const Icon(
       Icons.dry_cleaning_rounded,
       size: 60,
       color: Colors.black,
     ),
-    Icon(
+    const Icon(
       Icons.dry_cleaning_rounded,
       size: 60,
       color: Colors.black,
     ),
-    Icon(
+    const Icon(
       Icons.dry_cleaning_rounded,
       size: 60,
       color: Colors.black,
     ),
-    Icon(
+    const Icon(
       Icons.dry_cleaning_rounded,
       size: 60,
       color: Colors.black,
     ),
-    Icon(
+    const Icon(
       Icons.dry_cleaning_rounded,
       size: 60,
       color: Colors.black,
     ),
-    Icon(
+    const Icon(
       Icons.dry_cleaning_rounded,
       size: 60,
       color: Colors.black,
     ),
-    Icon(
+    const Icon(
       Icons.dry_cleaning_rounded,
       size: 60,
       color: Colors.black,
     ),
-    Icon(
+    const Icon(
       Icons.dry_cleaning_rounded,
       size: 60,
       color: Colors.black,
@@ -124,7 +117,7 @@ class _HomescreenState extends State<Homescreen> {
   ];
 
   Icon testIcon() {
-    return Icon(
+    return const Icon(
       Icons.dry_cleaning_rounded,
       size: 60,
       color: Colors.black,
@@ -133,80 +126,80 @@ class _HomescreenState extends State<Homescreen> {
 
   List<ForIcon> forIcons = [
     ForIcon(
-        Icon(
+        const Icon(
           Icons.dry_cleaning_rounded,
           size: 60,
           color: Colors.black,
         ),
-        Icon(
+        const Icon(
           Icons.dry_cleaning_rounded,
           size: 60,
           color: Colors.black,
         ),
-        Icon(
+        const Icon(
           Icons.dry_cleaning_rounded,
           size: 60,
           color: Colors.black,
         ),
-        Icon(
+        const Icon(
           Icons.dry_cleaning_rounded,
           size: 60,
           color: Colors.black,
         )),
     ForIcon(
-        Icon(
+        const Icon(
           Icons.dry_cleaning_rounded,
           size: 60,
           color: Colors.black,
         ),
-        Icon(
+        const Icon(
           Icons.dry_cleaning_rounded,
           size: 60,
           color: Colors.black,
         ),
-        Icon(
+        const Icon(
           Icons.dry_cleaning_rounded,
           size: 60,
           color: Colors.black,
         ),
-        Icon(
+        const Icon(
           Icons.dry_cleaning_rounded,
           size: 60,
           color: Colors.black,
         )),
     ForIcon(
-        Icon(
+        const Icon(
           Icons.dry_cleaning_rounded,
           size: 60,
           color: Colors.black,
         ),
-        Icon(
+        const Icon(
           Icons.dry_cleaning_rounded,
           size: 60,
           color: Colors.black,
         ),
-        Icon(
+        const Icon(
           Icons.dry_cleaning_rounded,
           size: 60,
           color: Colors.black,
         ),
-        Icon(
+        const Icon(
           Icons.dry_cleaning_rounded,
           size: 60,
           color: Colors.black,
         )),
     ForIcon(
-        Icon(
+        const Icon(
           Icons.dry_cleaning_rounded,
           size: 60,
           color: Colors.black,
         ),
-        Icon(
+        const Icon(
           Icons.dry_cleaning_rounded,
           size: 60,
           color: Colors.black,
         ),
-        Icon(
+        const Icon(
           Icons.dry_cleaning_rounded,
           size: 60,
           color: Colors.black,
@@ -222,15 +215,15 @@ class _HomescreenState extends State<Homescreen> {
         backgroundColor: Colors.black,
         body: Column(
           children: [
-            SizedBox(height: 15,),
+            const SizedBox(height: 15,),
             header(context),
-            Head(),
+            const Head(),
             Column(
               children: [
                 Stack(
                   children: [
                     CarouselSlider(
-                      carouselController: _controller,
+                      //carouselController: _controller,
                       items: imglist.map((imageurl) {
                         return Container(
                           decoration: BoxDecoration(
@@ -241,7 +234,7 @@ class _HomescreenState extends State<Homescreen> {
                                   fit: BoxFit.cover)),
                           width: MediaQuery.of(context).size.width,
                           height: double.infinity,
-                          margin: EdgeInsets.symmetric(horizontal: 10),
+                          margin: const EdgeInsets.symmetric(horizontal: 10),
                         );
                       }).toList(),
                       options: CarouselOptions(
@@ -255,15 +248,15 @@ class _HomescreenState extends State<Homescreen> {
                           });
                           // pageController.jumpToPage(index);
                         },
-                        autoPlayAnimationDuration: Duration(seconds: 1),
+                        autoPlayAnimationDuration: const Duration(seconds: 1),
                       ),
                     ),
                     Positioned(
                       bottom: 10,
-                      child: Container(
+                      child: SizedBox(
                         width: MediaQuery.of(context).size.width,
                         child: Center(
-                          child: Container(
+                          child: SizedBox(
                             width: 80,
                             height: 20,
                             child: ListView.builder(
@@ -272,7 +265,7 @@ class _HomescreenState extends State<Homescreen> {
                                 itemBuilder: (context, index) {
                                   return Center(
                                     child: Container(
-                                      margin: EdgeInsets.symmetric(horizontal: 3),
+                                      margin: const EdgeInsets.symmetric(horizontal: 3),
                                       width: 10,
                                       height: 10,
                                       decoration: BoxDecoration(
@@ -289,7 +282,7 @@ class _HomescreenState extends State<Homescreen> {
                     ),
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 Row(
@@ -308,26 +301,23 @@ class _HomescreenState extends State<Homescreen> {
                       onTap: () {
                         Navigator.of(context)
                             .push(MaterialPageRoute(builder: (context) {
-                          return Touch();
+                          return const Touch();
                         }));
                       },
-                      child: Container(
-                        // color: Colors.amber,
-                        child: CarouselSlider(
-                          options: CarouselOptions(
-                              viewportFraction: 2,
-                              aspectRatio: 3,
-                              
-                              onPageChanged: (index, _) {
-                                setState(() {
-                                  print(index);
-                                  selecticon = index;
-                                });
-                              }),
-                          items: forIcons.map((iconurl) {
-                            return forItems(context, forIcons.indexOf(iconurl));
-                          }).toList(),
-                        ),
+                      child: CarouselSlider(
+                        options: CarouselOptions(
+                            viewportFraction: 2,
+                            aspectRatio: 3,
+                            
+                            onPageChanged: (index, _) {
+                              setState(() {
+                                print(index);
+                                selecticon = index;
+                              });
+                            }),
+                        items: forIcons.map((iconurl) {
+                          return forItems(context, forIcons.indexOf(iconurl));
+                        }).toList(),
                       ),
                     ),
                     Container(
@@ -379,17 +369,17 @@ class _HomescreenState extends State<Homescreen> {
                   InkWell(
                     onTap: () {},
                     overlayColor: MaterialStateProperty.all(Colors.transparent),
-                    child: Icon(
+                    child: const Icon(
                       Icons.mail_outline_rounded,
                       size: 27,
                       color: Colors.white,
                     ),
                   ),
-                  SizedBox(width: 17),
+                  const SizedBox(width: 17),
                   InkWell(
                     onTap: () {},
                     overlayColor: MaterialStateProperty.all(Colors.transparent),
-                    child: Icon(
+                    child: const Icon(
                       Icons.favorite_border_rounded,
                       size: 27,
                       color: Colors.white,
@@ -415,21 +405,21 @@ class _HomescreenState extends State<Homescreen> {
                     onTap: () {
                       Navigator.of(context)
                           .push(MaterialPageRoute(builder: (context) {
-                        return Search();
+                        return const Search();
                       }));
                     },
                     overlayColor: MaterialStateProperty.all(Colors.transparent),
-                    child: Icon(
+                    child: const Icon(
                       Icons.search,
                       size: 27,
                       color: Colors.white,
                     ),
                   ),
-                  SizedBox(width: 17),
+                  const SizedBox(width: 17),
                   InkWell(
                     onTap: () {},
                     overlayColor: MaterialStateProperty.all(Colors.transparent),
-                    child: Icon(
+                    child: const Icon(
                       Icons.shopping_bag_outlined,
                       size: 27,
                       color: Colors.white,
@@ -449,16 +439,16 @@ class _HomescreenState extends State<Homescreen> {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         forIcons[index].icon_1 == null
-            ? Center()
+            ? const Center()
             : items(context, forIcons[index].icon_1!),
         forIcons[index].icon_2 == null
-            ? Center()
+            ? const Center()
             : items(context, forIcons[index].icon_2!),
         forIcons[index].icon_3 == null
-            ? Center()
+            ? const Center()
             : items(context, forIcons[index].icon_3!),
         forIcons[index].icon_4 == null
-            ? Center()
+            ? const Center()
             : items(context, forIcons[index].icon_4!),
       ],
     );
@@ -467,7 +457,7 @@ class _HomescreenState extends State<Homescreen> {
   items(BuildContext context, Icon icon) {
     return Padding(
       padding: const EdgeInsets.all(9),
-      child: Container(
+      child: SizedBox(
         width: 80,
         height: 80,
         child: CircleAvatar(

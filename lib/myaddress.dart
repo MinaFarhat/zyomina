@@ -1,7 +1,6 @@
-import 'package:flutter/cupertino.dart';
+// ignore_for_file: deprecated_member_use
+
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:zyo/shoppingaddress.dart';
 
 class Myaddress extends StatefulWidget {
@@ -20,7 +19,7 @@ class _MyaddressState extends State<Myaddress> {
         body: SingleChildScrollView(
           child: Column(
             children: [
-              SizedBox(
+              const SizedBox(
                 height: 15,
               ),
               Padding(
@@ -32,15 +31,15 @@ class _MyaddressState extends State<Myaddress> {
                       onTap: () {
                         Navigator.of(context).pop();
                       },
-                      child: Icon(
+                      child: const Icon(
                         Icons.arrow_back_ios_new_rounded,
                         color: Colors.white,
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 15,
                     ),
-                    Text(
+                    const Text(
                       "My Address",
                       style: TextStyle(
                         color: Colors.white,
@@ -54,7 +53,7 @@ class _MyaddressState extends State<Myaddress> {
               SizedBox(
                 height: MediaQuery.of(context).size.height*0.06,
               ),
-              Column(
+              const Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Icon(
@@ -71,20 +70,20 @@ class _MyaddressState extends State<Myaddress> {
                   )
                 ],
               ),
-              SizedBox(height: 40),
+              const SizedBox(height: 40),
               InkWell(
                 overlayColor: MaterialStateProperty.all(Colors.transparent),
                 onTap: () {
                   Navigator.of(context)
                       .push(MaterialPageRoute(builder: (context) {
-                    return ShoppingAddress();
+                    return const ShoppingAddress();
                   }));
                 },
                 child: Container(
                   color: Colors.white,
                   width: MediaQuery.of(context).size.width * 0.90,
                   height: 55,
-                  child: Center(
+                  child: const Center(
                     child: Text(
                       "+Add a shipping address",
                       style: TextStyle(

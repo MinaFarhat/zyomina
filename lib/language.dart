@@ -1,7 +1,6 @@
-import 'package:flutter/cupertino.dart';
+// ignore_for_file: deprecated_member_use
+
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
 class Language extends StatefulWidget {
   const Language({super.key});
@@ -20,7 +19,7 @@ class _LanguageState extends State<Language> {
         body: SingleChildScrollView(
           child: Column(
             children: [
-              SizedBox(
+              const SizedBox(
                 height: 15,
               ),
               Padding(
@@ -34,15 +33,15 @@ class _LanguageState extends State<Language> {
                       onTap: () {
                         Navigator.of(context).pop();
                       },
-                      child: Icon(
+                      child: const Icon(
                         Icons.arrow_back_ios_new_rounded,
                         color: Colors.white,
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 15,
                     ),
-                    Text(
+                    const Text(
                       "Language",
                       style: TextStyle(
                         color: Colors.white,
@@ -69,8 +68,8 @@ class _LanguageState extends State<Language> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 20),
+                    const Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 20),
                       child: Text(
                         "Arabic",
                         style: TextStyle(
@@ -80,8 +79,8 @@ class _LanguageState extends State<Language> {
                       ),
                     ),
                     if (_curentcorrect == 0)
-                      Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 10),
+                      const Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 10),
                         child: Icon(
                           Icons.done_rounded,
                           color: Colors.white,
@@ -91,7 +90,7 @@ class _LanguageState extends State<Language> {
                   ],
                 ),
               ),
-              SizedBox(height: 15),
+              const SizedBox(height: 15),
               Divider(
                 color: Colors.grey.shade900,
                 thickness: 1,
@@ -110,8 +109,8 @@ class _LanguageState extends State<Language> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 20),
+                    const Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 20),
                       child: Text(
                         "English",
                         style: TextStyle(
@@ -121,8 +120,8 @@ class _LanguageState extends State<Language> {
                       ),
                     ),
                     if (_curentcorrect == 1)
-                      Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 10),
+                      const Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 10),
                         child: Icon(
                           Icons.done_rounded,
                           color: Colors.white,
@@ -153,8 +152,8 @@ class _LanguageState extends State<Language> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 20),
+                    const Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 20),
                       child: Text(
                         "⼡⼢⼣⼤",
                         style: TextStyle(
@@ -164,8 +163,8 @@ class _LanguageState extends State<Language> {
                       ),
                     ),
                     if (_curentcorrect == 2)
-                      Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 10),
+                      const Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 10),
                         child: Icon(
                           Icons.done_rounded,
                           color: Colors.white,

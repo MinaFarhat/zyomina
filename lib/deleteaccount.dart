@@ -1,7 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
 class Deleteaccount extends StatefulWidget {
   const Deleteaccount({super.key});
@@ -19,7 +16,7 @@ class _DeleteaccountState extends State<Deleteaccount> {
         body: SingleChildScrollView(
           child: Column(
             children: [
-              SizedBox(
+              const SizedBox(
                 height: 15,
               ),
               Padding(
@@ -27,19 +24,19 @@ class _DeleteaccountState extends State<Deleteaccount> {
                 child: Row(
                   children: [
                     InkWell(
-                      overlayColor: MaterialStateProperty.all(Colors.transparent),
+                      overlayColor: WidgetStateProperty.all(Colors.transparent),
                       onTap: () {
                         Navigator.of(context).pop();
                       },
-                      child: Icon(
+                      child: const Icon(
                         Icons.arrow_back_ios_new_rounded,
                         color: Colors.white,
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 15,
                     ),
-                    Text(
+                    const Text(
                       "Delete Account",
                       style: TextStyle(
                         color: Colors.white,
@@ -63,7 +60,7 @@ class _DeleteaccountState extends State<Deleteaccount> {
                   SizedBox(
                     height: MediaQuery.of(context).size.height*0.045,
                   ),
-                  Text(
+                  const Text(
                     "Do You Really Want To Delete Your Account",
                     style: TextStyle(
                       color: Colors.white,
@@ -78,7 +75,7 @@ class _DeleteaccountState extends State<Deleteaccount> {
                 width: MediaQuery.of(context).size.width * 0.90,
                 height: 60,
                 child: InkWell(
-                  child: Center(
+                  child: const Center(
                     child: Text(
                       "NO",
                       style: TextStyle(
@@ -97,7 +94,7 @@ class _DeleteaccountState extends State<Deleteaccount> {
                 width: MediaQuery.of(context).size.width * 0.90,
                 height: 60,
                 child: InkWell(
-                  child: Center(
+                  child: const Center(
                     child: Text(
                       "YES",
                       style: TextStyle(

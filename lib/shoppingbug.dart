@@ -1,6 +1,6 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:zyo/shoppingaddress.dart';
 
 class Shoppingbug extends StatefulWidget {
@@ -28,7 +28,7 @@ class _ShoppingbugState extends State<Shoppingbug> {
         backgroundColor: Colors.black,
         body: Column(
           children: [
-            Container(
+            SizedBox(
               height: 50,
               child: Padding(
                 padding: const EdgeInsets.symmetric(
@@ -43,13 +43,13 @@ class _ShoppingbugState extends State<Shoppingbug> {
                       onTap: () {
                         Navigator.of(context).pop();
                       },
-                      child: Icon(
+                      child: const Icon(
                         Icons.close,
                         color: Colors.white,
                         size: 30,
                       ),
                     ),
-                    Text(
+                    const Text(
                       "Shopping Bag",
                       style: TextStyle(
                         color: Colors.white,
@@ -60,7 +60,7 @@ class _ShoppingbugState extends State<Shoppingbug> {
                     InkWell(
                       overlayColor:
                           MaterialStateProperty.all(Colors.transparent),
-                      child: Icon(
+                      child: const Icon(
                         Icons.close,
                         color: Colors.black,
                       ),
@@ -69,7 +69,7 @@ class _ShoppingbugState extends State<Shoppingbug> {
                 ),
               ),
             ),
-            Container(
+            SizedBox(
               height: MediaQuery.of(context).size.height -
                   300 -
                   MediaQuery.of(context).padding.top,
@@ -83,12 +83,12 @@ class _ShoppingbugState extends State<Shoppingbug> {
                 ),
               ),
             ),
-            Container(
+            SizedBox(
               width: MediaQuery.of(context).size.width * 0.9,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
+                  const Text(
                     "Totals",
                     style: TextStyle(
                       color: Colors.white,
@@ -96,12 +96,12 @@ class _ShoppingbugState extends State<Shoppingbug> {
                       fontWeight: FontWeight.w700,
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 36,
                   ),
                   Row(
                     children: [
-                      Text(
+                      const Text(
                         "Sub Total",
                         style: TextStyle(
                           color: Colors.white,
@@ -109,7 +109,7 @@ class _ShoppingbugState extends State<Shoppingbug> {
                           fontWeight: FontWeight.normal,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 10,
                       ),
                       Flexible(
@@ -118,13 +118,15 @@ class _ShoppingbugState extends State<Shoppingbug> {
                           builder: (BuildContext context,
                               BoxConstraints constraints) {
                             final boxWidth = constraints.constrainWidth();
-                            final dashWidth = 4.0;
-                            final dashHeight = 2.0;
+                            const dashWidth = 4.0;
+                            const dashHeight = 2.0;
                             final dashCount =
                                 (boxWidth / (2 * dashWidth)).floor();
                             return Flex(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              direction: Axis.horizontal,
                               children: List.generate(dashCount, (_) {
-                                return SizedBox(
+                                return const SizedBox(
                                   width: dashWidth,
                                   height: dashHeight,
                                   child: DecoratedBox(
@@ -133,16 +135,14 @@ class _ShoppingbugState extends State<Shoppingbug> {
                                   ),
                                 );
                               }),
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              direction: Axis.horizontal,
                             );
                           },
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 10,
                       ),
-                      Text(
+                      const Text(
                         "\$30.00000",
                         style: TextStyle(
                           color: Colors.white,
@@ -152,12 +152,12 @@ class _ShoppingbugState extends State<Shoppingbug> {
                       ),
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 30,
                   ),
                   Row(
                     children: [
-                      Text(
+                      const Text(
                         "Shipping",
                         style: TextStyle(
                           color: Colors.white,
@@ -165,7 +165,7 @@ class _ShoppingbugState extends State<Shoppingbug> {
                           fontWeight: FontWeight.normal,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 10,
                       ),
                       Flexible(
@@ -174,13 +174,15 @@ class _ShoppingbugState extends State<Shoppingbug> {
                           builder: (BuildContext context,
                               BoxConstraints constraints) {
                             final boxWidth = constraints.constrainWidth();
-                            final dashWidth = 4.0;
-                            final dashHeight = 2.0;
+                            const dashWidth = 4.0;
+                            const dashHeight = 2.0;
                             final dashCount =
                                 (boxWidth / (2 * dashWidth)).floor();
                             return Flex(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              direction: Axis.horizontal,
                               children: List.generate(dashCount, (_) {
-                                return SizedBox(
+                                return const SizedBox(
                                   width: dashWidth,
                                   height: dashHeight,
                                   child: DecoratedBox(
@@ -189,16 +191,14 @@ class _ShoppingbugState extends State<Shoppingbug> {
                                   ),
                                 );
                               }),
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              direction: Axis.horizontal,
                             );
                           },
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 10,
                       ),
-                      Text(
+                      const Text(
                         "\$0",
                         style: TextStyle(
                           color: Colors.white,
@@ -208,7 +208,7 @@ class _ShoppingbugState extends State<Shoppingbug> {
                       ),
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 45,
                   ),
                   Container(
@@ -223,7 +223,7 @@ class _ShoppingbugState extends State<Shoppingbug> {
                           backgroundColor: Colors.black,
                           context: context,
                           builder: (context) {
-                            return Container(
+                            return SizedBox(
                               height: MediaQuery.of(context).size.height*0.45,
                               child: Padding(
                                 padding: const EdgeInsets.symmetric(
@@ -232,7 +232,7 @@ class _ShoppingbugState extends State<Shoppingbug> {
                                   children: [
                                     Column(
                                       children: [
-                                        Row(
+                                        const Row(
                                           mainAxisAlignment:
                                               MainAxisAlignment.end,
                                           children: [
@@ -245,14 +245,14 @@ class _ShoppingbugState extends State<Shoppingbug> {
                                             ),
                                           ],
                                         ),
-                                        SizedBox(
+                                        const SizedBox(
                                           height: 20,
                                         ),
                                         Column(
                                           crossAxisAlignment:
                                               CrossAxisAlignment.start,
                                           children: [
-                                            Container(
+                                            SizedBox(
                                               height: MediaQuery.of(context)
                                                       .size
                                                       .width /
@@ -296,10 +296,10 @@ class _ShoppingbugState extends State<Shoppingbug> {
                                                 },
                                               ),
                                             ),
-                                            SizedBox(
+                                            const SizedBox(
                                               height: 30,
                                             ),
-                                            Row(
+                                            const Row(
                                               mainAxisAlignment:
                                                   MainAxisAlignment.start,
                                               children: [
@@ -337,10 +337,10 @@ class _ShoppingbugState extends State<Shoppingbug> {
                                               Colors.transparent),
                                           onTap: () {
                                             Navigator.of(context).push(MaterialPageRoute(builder: (context){
-                                              return ShoppingAddress();
+                                              return const ShoppingAddress();
                                             }));
                                           },
-                                          child: Center(
+                                          child: const Center(
                                             child: Text(
                                               "CHECKOUT",
                                               style: TextStyle(
@@ -363,7 +363,7 @@ class _ShoppingbugState extends State<Shoppingbug> {
                       child: Center(
                         child: Text(
                           "CHECKOUT ($number)",
-                          style: TextStyle(
+                          style: const TextStyle(
                             color: Colors.black,
                             fontSize: 18,
                             fontWeight: FontWeight.w500,
@@ -402,25 +402,25 @@ class _ShoppingbugState extends State<Shoppingbug> {
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 width: 10,
               ),
               Expanded(
                 flex: 2,
-                child: Container(
+                child: SizedBox(
                   height: MediaQuery.of(context).size.height * 0.16,
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      SizedBox(
+                      const SizedBox(
                         height: 5,
                       ),
-                      Container(
+                      SizedBox(
                         width: MediaQuery.of(context).size.width * 0.6,
                         child: Text(
                           card[index]["title"],
-                          style: TextStyle(
+                          style: const TextStyle(
                             color: Colors.white,
                             fontSize: 12,
                           ),
@@ -430,7 +430,7 @@ class _ShoppingbugState extends State<Shoppingbug> {
                       // SizedBox(
                       //   height: 10,
                       // ),
-                      Text(
+                      const Text(
                         "US\$9.00",
                         style: TextStyle(
                           color: Colors.white,
@@ -449,7 +449,7 @@ class _ShoppingbugState extends State<Shoppingbug> {
                           fontWeight: FontWeight.w200,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 15,
                       ),
                       Row(
@@ -469,7 +469,7 @@ class _ShoppingbugState extends State<Shoppingbug> {
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceBetween,
                                 children: [
-                                  Center(
+                                  const Center(
                                     child: Text(
                                       "S(4)/",
                                       style: TextStyle(
@@ -488,7 +488,7 @@ class _ShoppingbugState extends State<Shoppingbug> {
                                       ),
                                     ),
                                   ),
-                                  Center(
+                                  const Center(
                                     child: Icon(
                                       Icons.arrow_drop_down_sharp,
                                       color: Colors.black,
@@ -517,7 +517,7 @@ class _ShoppingbugState extends State<Shoppingbug> {
                                     overlayColor: MaterialStateProperty.all(
                                         Colors.transparent),
                                     onTap: () {},
-                                    child: Icon(
+                                    child: const Icon(
                                       Icons.add,
                                       color: Colors.white,
                                       size: 20,
@@ -528,16 +528,14 @@ class _ShoppingbugState extends State<Shoppingbug> {
                                     width: 1,
                                     color: Colors.white,
                                   ),
-                                  Container(
-                                    child: Center(
-                                        child: Text(
-                                      "1",
-                                      style: TextStyle(
-                                          color: Colors.white,
-                                          fontSize: 15,
-                                          fontWeight: FontWeight.w600),
-                                    )),
-                                  ),
+                                  const Center(
+                                      child: Text(
+                                    "1",
+                                    style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 15,
+                                        fontWeight: FontWeight.w600),
+                                  )),
                                   Container(
                                     height: MediaQuery.of(context).size.height,
                                     width: 1,
@@ -547,7 +545,7 @@ class _ShoppingbugState extends State<Shoppingbug> {
                                     overlayColor: MaterialStateProperty.all(
                                         Colors.transparent),
                                     onTap: () {},
-                                    child: Icon(
+                                    child: const Icon(
                                       Icons.remove,
                                       color: Colors.white,
                                       size: 20,
@@ -559,7 +557,7 @@ class _ShoppingbugState extends State<Shoppingbug> {
                           ),
                         ],
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 10,
                       ),
                     ],
@@ -569,7 +567,7 @@ class _ShoppingbugState extends State<Shoppingbug> {
             ],
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 5,
         ),
         index != card.length - 1
